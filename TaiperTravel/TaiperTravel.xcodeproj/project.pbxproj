@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2806E2CA56651628C522B9DA /* Pods_TaiperTravelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 813FBA85294539D1BDD88D9C /* Pods_TaiperTravelTests.framework */; };
+		6D0276CC8DCD47862AA1EB02 /* Pods_TaiperTravel_TaiperTravelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1063DCA2121DA22CA3FE923F /* Pods_TaiperTravel_TaiperTravelUITests.framework */; };
+		6E5D2728678F2CEAB75423A7 /* Pods_TaiperTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2638171DCBFF678A548C7C05 /* Pods_TaiperTravel.framework */; };
 		B07776272C075F14004C1F2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776262C075F14004C1F2C /* AppDelegate.swift */; };
 		B07776292C075F14004C1F2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776282C075F14004C1F2C /* SceneDelegate.swift */; };
 		B077762B2C075F14004C1F2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B077762A2C075F14004C1F2C /* ViewController.swift */; };
@@ -36,6 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1063DCA2121DA22CA3FE923F /* Pods_TaiperTravel_TaiperTravelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaiperTravel_TaiperTravelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2638171DCBFF678A548C7C05 /* Pods_TaiperTravel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaiperTravel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B2D16727492D17131F3E0DF /* Pods-TaiperTravel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiperTravel.debug.xcconfig"; path = "Target Support Files/Pods-TaiperTravel/Pods-TaiperTravel.debug.xcconfig"; sourceTree = "<group>"; };
+		35BE2ED4EAC81C4AA4728CD9 /* Pods-TaiperTravel-TaiperTravelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiperTravel-TaiperTravelUITests.debug.xcconfig"; path = "Target Support Files/Pods-TaiperTravel-TaiperTravelUITests/Pods-TaiperTravel-TaiperTravelUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8111D014F938D456A3F529C1 /* Pods-TaiperTravelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiperTravelTests.release.xcconfig"; path = "Target Support Files/Pods-TaiperTravelTests/Pods-TaiperTravelTests.release.xcconfig"; sourceTree = "<group>"; };
+		813FBA85294539D1BDD88D9C /* Pods_TaiperTravelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaiperTravelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A811E41DCD8916A6959AF978 /* Pods-TaiperTravel-TaiperTravelUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiperTravel-TaiperTravelUITests.release.xcconfig"; path = "Target Support Files/Pods-TaiperTravel-TaiperTravelUITests/Pods-TaiperTravel-TaiperTravelUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B07776232C075F14004C1F2C /* TaiperTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaiperTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07776262C075F14004C1F2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B07776282C075F14004C1F2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +59,8 @@
 		B07776432C075F16004C1F2C /* TaiperTravelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaiperTravelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07776472C075F16004C1F2C /* TaiperTravelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiperTravelUITests.swift; sourceTree = "<group>"; };
 		B07776492C075F16004C1F2C /* TaiperTravelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiperTravelUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D54CC825432A526D074BFF43 /* Pods-TaiperTravelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiperTravelTests.debug.xcconfig"; path = "Target Support Files/Pods-TaiperTravelTests/Pods-TaiperTravelTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FEFFE2F58E8ED903F3023AF5 /* Pods-TaiperTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiperTravel.release.xcconfig"; path = "Target Support Files/Pods-TaiperTravel/Pods-TaiperTravel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E5D2728678F2CEAB75423A7 /* Pods_TaiperTravel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2806E2CA56651628C522B9DA /* Pods_TaiperTravelTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D0276CC8DCD47862AA1EB02 /* Pods_TaiperTravel_TaiperTravelUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		262FA46788F438004A99244D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B2D16727492D17131F3E0DF /* Pods-TaiperTravel.debug.xcconfig */,
+				FEFFE2F58E8ED903F3023AF5 /* Pods-TaiperTravel.release.xcconfig */,
+				35BE2ED4EAC81C4AA4728CD9 /* Pods-TaiperTravel-TaiperTravelUITests.debug.xcconfig */,
+				A811E41DCD8916A6959AF978 /* Pods-TaiperTravel-TaiperTravelUITests.release.xcconfig */,
+				D54CC825432A526D074BFF43 /* Pods-TaiperTravelTests.debug.xcconfig */,
+				8111D014F938D456A3F529C1 /* Pods-TaiperTravelTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B077761A2C075F14004C1F2C = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +112,8 @@
 				B077763C2C075F16004C1F2C /* TaiperTravelTests */,
 				B07776462C075F16004C1F2C /* TaiperTravelUITests */,
 				B07776242C075F14004C1F2C /* Products */,
+				262FA46788F438004A99244D /* Pods */,
+				E00947FF622D2553D1A97B1D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +158,16 @@
 			path = TaiperTravelUITests;
 			sourceTree = "<group>";
 		};
+		E00947FF622D2553D1A97B1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2638171DCBFF678A548C7C05 /* Pods_TaiperTravel.framework */,
+				1063DCA2121DA22CA3FE923F /* Pods_TaiperTravel_TaiperTravelUITests.framework */,
+				813FBA85294539D1BDD88D9C /* Pods_TaiperTravelTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B077764D2C075F16004C1F2C /* Build configuration list for PBXNativeTarget "TaiperTravel" */;
 			buildPhases = (
+				E8D72AF565F16F4D298B46DC /* [CP] Check Pods Manifest.lock */,
 				B077761F2C075F14004C1F2C /* Sources */,
 				B07776202C075F14004C1F2C /* Frameworks */,
 				B07776212C075F14004C1F2C /* Resources */,
+				1D3052C15F5A7B35E95E13F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B07776502C075F16004C1F2C /* Build configuration list for PBXNativeTarget "TaiperTravelTests" */;
 			buildPhases = (
+				CC959750D5C8E6EAA5D5661D /* [CP] Check Pods Manifest.lock */,
 				B07776352C075F16004C1F2C /* Sources */,
 				B07776362C075F16004C1F2C /* Frameworks */,
 				B07776372C075F16004C1F2C /* Resources */,
@@ -169,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B07776532C075F16004C1F2C /* Build configuration list for PBXNativeTarget "TaiperTravelUITests" */;
 			buildPhases = (
+				10CACFECE14D69B68E79E936 /* [CP] Check Pods Manifest.lock */,
 				B077763F2C075F16004C1F2C /* Sources */,
 				B07776402C075F16004C1F2C /* Frameworks */,
 				B07776412C075F16004C1F2C /* Resources */,
+				9C0AE25D6F815A2CFC396642 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +298,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10CACFECE14D69B68E79E936 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaiperTravel-TaiperTravelUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D3052C15F5A7B35E95E13F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaiperTravel/Pods-TaiperTravel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaiperTravel/Pods-TaiperTravel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaiperTravel/Pods-TaiperTravel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C0AE25D6F815A2CFC396642 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaiperTravel-TaiperTravelUITests/Pods-TaiperTravel-TaiperTravelUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaiperTravel-TaiperTravelUITests/Pods-TaiperTravel-TaiperTravelUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaiperTravel-TaiperTravelUITests/Pods-TaiperTravel-TaiperTravelUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC959750D5C8E6EAA5D5661D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaiperTravelTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8D72AF565F16F4D298B46DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaiperTravel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B077761F2C075F14004C1F2C /* Sources */ = {
@@ -437,6 +586,7 @@
 		};
 		B077764E2C075F16004C1F2C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B2D16727492D17131F3E0DF /* Pods-TaiperTravel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,6 +620,7 @@
 		};
 		B077764F2C075F16004C1F2C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEFFE2F58E8ED903F3023AF5 /* Pods-TaiperTravel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -503,6 +654,7 @@
 		};
 		B07776512C075F16004C1F2C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D54CC825432A526D074BFF43 /* Pods-TaiperTravelTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -527,6 +679,7 @@
 		};
 		B07776522C075F16004C1F2C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8111D014F938D456A3F529C1 /* Pods-TaiperTravelTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -551,6 +704,7 @@
 		};
 		B07776542C075F16004C1F2C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35BE2ED4EAC81C4AA4728CD9 /* Pods-TaiperTravel-TaiperTravelUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -573,6 +727,7 @@
 		};
 		B07776552C075F16004C1F2C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A811E41DCD8916A6959AF978 /* Pods-TaiperTravel-TaiperTravelUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
