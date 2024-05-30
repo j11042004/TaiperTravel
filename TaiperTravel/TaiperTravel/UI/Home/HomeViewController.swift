@@ -41,5 +41,13 @@ extension HomeViewController {
                 weakSelf.showLoading(show)
             }
             .store(in: &cancellableSet)
+        
+        self.viewModel.showApiErrorAlert
+            .compactMap({ $0 })
+            .withUnretained(self)
+            .sink { (weakSelf, message) in
+                let alert = Tools.alertOneSelWith(message: message) { }
+            }
+            .store(in: &cancellableSet)
     }
 }
