@@ -12,13 +12,17 @@
 		6E5D2728678F2CEAB75423A7 /* Pods_TaiperTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2638171DCBFF678A548C7C05 /* Pods_TaiperTravel.framework */; };
 		B07776272C075F14004C1F2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776262C075F14004C1F2C /* AppDelegate.swift */; };
 		B07776292C075F14004C1F2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776282C075F14004C1F2C /* SceneDelegate.swift */; };
-		B077762B2C075F14004C1F2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B077762A2C075F14004C1F2C /* ViewController.swift */; };
+		B077762B2C075F14004C1F2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B077762A2C075F14004C1F2C /* HomeViewController.swift */; };
 		B077762E2C075F14004C1F2C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B077762D2C075F14004C1F2C /* Base */; };
 		B07776302C075F16004C1F2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B077762F2C075F16004C1F2C /* Assets.xcassets */; };
 		B07776332C075F16004C1F2C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B07776322C075F16004C1F2C /* Base */; };
 		B077763E2C075F16004C1F2C /* TaiperTravelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B077763D2C075F16004C1F2C /* TaiperTravelTests.swift */; };
 		B07776482C075F16004C1F2C /* TaiperTravelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776472C075F16004C1F2C /* TaiperTravelUITests.swift */; };
 		B077764A2C075F16004C1F2C /* TaiperTravelUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776492C075F16004C1F2C /* TaiperTravelUITestsLaunchTests.swift */; };
+		B07776622C076A28004C1F2C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776612C076A28004C1F2C /* HomeViewModel.swift */; };
+		B07776652C076A53004C1F2C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776642C076A53004C1F2C /* BaseViewController.swift */; };
+		B07776672C076A67004C1F2C /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776662C076A67004C1F2C /* BaseViewModel.swift */; };
+		B07776692C08AB2E004C1F2C /* Publisher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776682C08AB2E004C1F2C /* Publisher+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +53,8 @@
 		B07776232C075F14004C1F2C /* TaiperTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaiperTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07776262C075F14004C1F2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B07776282C075F14004C1F2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B077762A2C075F14004C1F2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B077762D2C075F14004C1F2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B077762A2C075F14004C1F2C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B077762D2C075F14004C1F2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		B077762F2C075F16004C1F2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B07776322C075F16004C1F2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B07776342C075F16004C1F2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +63,10 @@
 		B07776432C075F16004C1F2C /* TaiperTravelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaiperTravelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07776472C075F16004C1F2C /* TaiperTravelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiperTravelUITests.swift; sourceTree = "<group>"; };
 		B07776492C075F16004C1F2C /* TaiperTravelUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiperTravelUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B07776612C076A28004C1F2C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B07776642C076A53004C1F2C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B07776662C076A67004C1F2C /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		B07776682C08AB2E004C1F2C /* Publisher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extension.swift"; sourceTree = "<group>"; };
 		D54CC825432A526D074BFF43 /* Pods-TaiperTravelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiperTravelTests.debug.xcconfig"; path = "Target Support Files/Pods-TaiperTravelTests/Pods-TaiperTravelTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FEFFE2F58E8ED903F3023AF5 /* Pods-TaiperTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiperTravel.release.xcconfig"; path = "Target Support Files/Pods-TaiperTravel/Pods-TaiperTravel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,11 +139,13 @@
 			children = (
 				B07776262C075F14004C1F2C /* AppDelegate.swift */,
 				B07776282C075F14004C1F2C /* SceneDelegate.swift */,
-				B077762A2C075F14004C1F2C /* ViewController.swift */,
-				B077762C2C075F14004C1F2C /* Main.storyboard */,
-				B077762F2C075F16004C1F2C /* Assets.xcassets */,
-				B07776312C075F16004C1F2C /* LaunchScreen.storyboard */,
-				B07776342C075F16004C1F2C /* Info.plist */,
+				B07776572C076557004C1F2C /* Common */,
+				B07776582C076564004C1F2C /* Core */,
+				B07776592C07656B004C1F2C /* Data */,
+				B077765A2C076572004C1F2C /* UI */,
+				B077765B2C07657E004C1F2C /* Extension */,
+				B077765C2C07658B004C1F2C /* Resources */,
+				B077765D2C0765CF004C1F2C /* Util */,
 			);
 			path = TaiperTravel;
 			sourceTree = "<group>";
@@ -155,6 +165,88 @@
 				B07776492C075F16004C1F2C /* TaiperTravelUITestsLaunchTests.swift */,
 			);
 			path = TaiperTravelUITests;
+			sourceTree = "<group>";
+		};
+		B07776572C076557004C1F2C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B07776582C076564004C1F2C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B07776592C07656B004C1F2C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B077765A2C076572004C1F2C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B07776602C076923004C1F2C /* Launch */,
+				B07776632C076A3A004C1F2C /* Base */,
+				B077765F2C076918004C1F2C /* Home */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B077765B2C07657E004C1F2C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B07776682C08AB2E004C1F2C /* Publisher+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B077765C2C07658B004C1F2C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B07776342C075F16004C1F2C /* Info.plist */,
+				B077762F2C075F16004C1F2C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B077765D2C0765CF004C1F2C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		B077765F2C076918004C1F2C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B077762C2C075F14004C1F2C /* Home.storyboard */,
+				B077762A2C075F14004C1F2C /* HomeViewController.swift */,
+				B07776612C076A28004C1F2C /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B07776602C076923004C1F2C /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				B07776312C075F16004C1F2C /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		B07776632C076A3A004C1F2C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B07776642C076A53004C1F2C /* BaseViewController.swift */,
+				B07776662C076A67004C1F2C /* BaseViewModel.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		E00947FF622D2553D1A97B1D /* Frameworks */ = {
@@ -406,9 +498,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B077762B2C075F14004C1F2C /* ViewController.swift in Sources */,
+				B07776652C076A53004C1F2C /* BaseViewController.swift in Sources */,
+				B077762B2C075F14004C1F2C /* HomeViewController.swift in Sources */,
+				B07776692C08AB2E004C1F2C /* Publisher+Extension.swift in Sources */,
 				B07776272C075F14004C1F2C /* AppDelegate.swift in Sources */,
 				B07776292C075F14004C1F2C /* SceneDelegate.swift in Sources */,
+				B07776622C076A28004C1F2C /* HomeViewModel.swift in Sources */,
+				B07776672C076A67004C1F2C /* BaseViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,12 +541,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B077762C2C075F14004C1F2C /* Main.storyboard */ = {
+		B077762C2C075F14004C1F2C /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B077762D2C075F14004C1F2C /* Base */,
 			);
-			name = Main.storyboard;
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		B07776312C075F16004C1F2C /* LaunchScreen.storyboard */ = {
@@ -594,10 +690,10 @@
 				DEVELOPMENT_TEAM = EU9975222N;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TaiperTravel/Info.plist;
+				INFOPLIST_FILE = TaiperTravel/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -629,10 +725,10 @@
 				DEVELOPMENT_TEAM = EU9975222N;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TaiperTravel/Info.plist;
+				INFOPLIST_FILE = TaiperTravel/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
