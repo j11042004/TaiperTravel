@@ -7,10 +7,9 @@
 
 import Foundation
 
-enum ApiError {
+enum ApiError: Error {
     case connect(_ code: String?, _ message: String?, _ error: Error?)
     case resultFail(_ code: String?, _ message: String?, _ data: Data? = nil)
-    case other(_ code: String?, _ message: String?)
 }
 
 enum Language: String {

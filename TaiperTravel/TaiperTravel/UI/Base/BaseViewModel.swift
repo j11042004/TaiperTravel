@@ -41,10 +41,6 @@ extension BaseViewModel {
             }
             errorMessage = codeInfo + "\(message ?? "")"
             break
-        case .other(let code, let message):
-            errorCode = code
-            errorMessage = message
-            break
         }
         
         let alertMessage = errorMessage ?? ""
