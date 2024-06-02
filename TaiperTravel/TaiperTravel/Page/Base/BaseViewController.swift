@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import Combine
 
 class BaseViewController: UIViewController {
     private lazy var loadingView: LoadingView = .init()
+    
+    /// combine 回收 Set
+    public var cancellableSet = Set<AnyCancellable>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()

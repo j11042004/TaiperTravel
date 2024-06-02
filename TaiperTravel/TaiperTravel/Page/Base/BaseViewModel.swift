@@ -6,11 +6,16 @@
 //
 
 import Foundation
+import UIKit
 import Combine
 
 class BaseViewModel: NSObject {
     @Published private(set) var showLoading: Bool = false
     let showApiErrorAlert: PassthroughSubject<String?, Never> = .init()
+    let showNextVC: PassthroughSubject<UIViewController, Never> = .init()
+    
+    /// combine 回收 Set
+    public var cancellableSet = Set<AnyCancellable>()
 }
 
 extension BaseViewModel {

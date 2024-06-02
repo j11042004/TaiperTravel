@@ -12,8 +12,6 @@ class HomeViewController: BaseViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private var viewModel: HomeViewModel!
-    /// combine 回收 Set
-    private var cancellableSet = Set<AnyCancellable>()
     
     private let headerName = String(describing: HomeInfoTableHeader.self)
     private let attractionCellName = String(describing: AttractionTableCell.self)
@@ -35,6 +33,14 @@ extension HomeViewController {
     }
     
     override func subscribeViewModel() {
+        self.viewModel.showNextVC
+            .receive(on: DispatchQueue.main)
+            .withUnretained(self)
+            .sink { (weakSelf, vc) in
+                weakSelf.navigationController?.pushViewController(vc, animated: true)
+            }
+            .store(in: &cancellableSet)
+        
         self.viewModel.$showLoading
             .receive(on: DispatchQueue.main)
             .withUnretained(self)

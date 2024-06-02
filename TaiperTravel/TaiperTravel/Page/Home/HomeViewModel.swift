@@ -24,9 +24,6 @@ class HomeViewModel: BaseViewModel {
         }
     }
     
-    /// combine 回收 Set
-    private var cancellableSet = Set<AnyCancellable>()
-    
     //MARK: Data
     /// 景點 Array
     private var attractionResponses: [AttractionsResponse] = []
