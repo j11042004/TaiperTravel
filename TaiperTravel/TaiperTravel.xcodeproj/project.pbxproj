@@ -11,6 +11,9 @@
 		6D0276CC8DCD47862AA1EB02 /* Pods_TaiperTravel_TaiperTravelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1063DCA2121DA22CA3FE923F /* Pods_TaiperTravel_TaiperTravelUITests.framework */; };
 		6E5D2728678F2CEAB75423A7 /* Pods_TaiperTravel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2638171DCBFF678A548C7C05 /* Pods_TaiperTravel.framework */; };
 		B02F74E92C0CA7BE00B549C7 /* CommonName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F74E82C0CA7BE00B549C7 /* CommonName.swift */; };
+		B02F74EC2C0CAAB400B549C7 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02F74EB2C0CAAB400B549C7 /* WebViewController.xib */; };
+		B02F74ED2C0CAAB400B549C7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F74EA2C0CAAB400B549C7 /* WebViewController.swift */; };
+		B02F74F02C0CABB500B549C7 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F74EF2C0CABB500B549C7 /* WebViewModel.swift */; };
 		B07776272C075F14004C1F2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776262C075F14004C1F2C /* AppDelegate.swift */; };
 		B07776292C075F14004C1F2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776282C075F14004C1F2C /* SceneDelegate.swift */; };
 		B077762B2C075F14004C1F2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B077762A2C075F14004C1F2C /* HomeViewController.swift */; };
@@ -79,6 +82,9 @@
 		813FBA85294539D1BDD88D9C /* Pods_TaiperTravelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaiperTravelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A811E41DCD8916A6959AF978 /* Pods-TaiperTravel-TaiperTravelUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiperTravel-TaiperTravelUITests.release.xcconfig"; path = "Target Support Files/Pods-TaiperTravel-TaiperTravelUITests/Pods-TaiperTravel-TaiperTravelUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B02F74E82C0CA7BE00B549C7 /* CommonName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonName.swift; sourceTree = "<group>"; };
+		B02F74EA2C0CAAB400B549C7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		B02F74EB2C0CAAB400B549C7 /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		B02F74EF2C0CABB500B549C7 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
 		B07776232C075F14004C1F2C /* TaiperTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaiperTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07776262C075F14004C1F2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B07776282C075F14004C1F2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +172,16 @@
 				8111D014F938D456A3F529C1 /* Pods-TaiperTravelTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B02F74EE2C0CAAB900B549C7 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				B02F74EA2C0CAAB400B549C7 /* WebViewController.swift */,
+				B02F74EB2C0CAAB400B549C7 /* WebViewController.xib */,
+				B02F74EF2C0CABB500B549C7 /* WebViewModel.swift */,
+			);
+			path = Web;
 			sourceTree = "<group>";
 		};
 		B077761A2C075F14004C1F2C = {
@@ -259,6 +275,7 @@
 				B07776602C076923004C1F2C /* Launch */,
 				B07776632C076A3A004C1F2C /* Base */,
 				B077765F2C076918004C1F2C /* Home */,
+				B02F74EE2C0CAAB900B549C7 /* Web */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -535,6 +552,7 @@
 				B07776302C075F16004C1F2C /* Assets.xcassets in Resources */,
 				B077768D2C0C4018004C1F2C /* LoadingView.xib in Resources */,
 				B07776992C0C4F82004C1F2C /* AttractionTableCell.xib in Resources */,
+				B02F74EC2C0CAAB400B549C7 /* WebViewController.xib in Resources */,
 				B07776332C075F16004C1F2C /* Base in Resources */,
 				B077762E2C075F14004C1F2C /* Base in Resources */,
 				B07776A12C0C4FCF004C1F2C /* HomeInfoTableHeader.xib in Resources */,
@@ -673,6 +691,7 @@
 				B077768E2C0C4018004C1F2C /* LoadingView.swift in Sources */,
 				B07776872C0B7EF6004C1F2C /* EventNewsResponse.swift in Sources */,
 				B077762B2C075F14004C1F2C /* HomeViewController.swift in Sources */,
+				B02F74F02C0CABB500B549C7 /* WebViewModel.swift in Sources */,
 				B07776692C08AB2E004C1F2C /* Publisher+Extension.swift in Sources */,
 				B077769F2C0C4FBC004C1F2C /* HomeInfoTableHeader.swift in Sources */,
 				B07776742C08B044004C1F2C /* Common.swift in Sources */,
@@ -681,6 +700,7 @@
 				B07776A72C0C6D94004C1F2C /* Array+Extension.swift in Sources */,
 				B07776AB2C0C727B004C1F2C /* HomeNews.swift in Sources */,
 				B07776272C075F14004C1F2C /* AppDelegate.swift in Sources */,
+				B02F74ED2C0CAAB400B549C7 /* WebViewController.swift in Sources */,
 				B077767F2C0B6555004C1F2C /* AttractionsRequest.swift in Sources */,
 				B077767D2C0B652E004C1F2C /* ApiRequest.swift in Sources */,
 				B07776982C0C4F82004C1F2C /* AttractionTableCell.swift in Sources */,

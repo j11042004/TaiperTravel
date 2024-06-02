@@ -47,6 +47,7 @@ extension CommonName {
     struct Page {
         enum Title: String {
             case home = "悠遊台北"
+            case newsWeb = "最新消息"
             
             var string: String {
                 return self.rawValue

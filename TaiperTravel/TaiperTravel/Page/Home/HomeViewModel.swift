@@ -83,6 +83,29 @@ extension HomeViewModel {
         }
     }
     
+    public func vcSelect(indexPath: IndexPath) {
+        guard let selectInfo = homePageInfos[safe: indexPath.section] else {
+            return
+        }
+        switch selectInfo.type {
+        case .attraction:
+            guard let attraction = selectInfo.attractions[safe: indexPath.row] else { return }
+            
+        case .news:
+            guard 
+                let news = selectInfo.news[safe: indexPath.row],
+                let url = URL(string: news.webUrl)
+            else { return }
+            let title = CommonName.Page.Title.newsWeb.string
+            
+            let webViewModel = WebViewModel(title: title, url: url)
+            
+            let webVC = WebViewController(nibName: String(describing: WebViewController.self), bundle: nil)
+            webVC.setup(viewModel: webViewModel)
+            self.showNextVC.send(webVC)
+        }
+    }
+    
     //MARK: API
     public func apiLoadAttraction() {
         self.showLoading(true)

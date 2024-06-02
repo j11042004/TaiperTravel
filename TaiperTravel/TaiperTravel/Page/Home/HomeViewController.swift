@@ -103,7 +103,7 @@ extension HomeViewController {
 //MARK: - TableViewDelegate
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        viewModel.vcSelect(indexPath: indexPath)
     }
 }
 
