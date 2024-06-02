@@ -10,10 +10,12 @@ import Combine
 
 class BaseViewModel: NSObject {
     @Published private(set) var showLoading: Bool = false
-    @Published private(set) var showApiErrorAlert: PassthroughSubject<String?, Never> = .init()
+    let showApiErrorAlert: PassthroughSubject<String?, Never> = .init()
 }
 
 extension BaseViewModel {
+    public func showLoading(_ show: Bool) { showLoading = show }
+    
     public func processApiAlert(error: ApiError, showAlert: Bool) {
         if !showAlert {
             showApiErrorAlert.send(nil)

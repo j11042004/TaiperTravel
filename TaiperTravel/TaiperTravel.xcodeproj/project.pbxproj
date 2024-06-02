@@ -37,6 +37,8 @@
 		B07776852C0B7EA2004C1F2C /* EventNewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776842C0B7EA2004C1F2C /* EventNewsRequest.swift */; };
 		B07776872C0B7EF6004C1F2C /* EventNewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776862C0B7EF6004C1F2C /* EventNewsResponse.swift */; };
 		B07776892C0C3FD6004C1F2C /* Combine+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776882C0C3FD5004C1F2C /* Combine+UIKit.swift */; };
+		B077768D2C0C4018004C1F2C /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B077768B2C0C4018004C1F2C /* LoadingView.xib */; };
+		B077768E2C0C4018004C1F2C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B077768C2C0C4018004C1F2C /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		B07776842C0B7EA2004C1F2C /* EventNewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventNewsRequest.swift; sourceTree = "<group>"; };
 		B07776862C0B7EF6004C1F2C /* EventNewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventNewsResponse.swift; sourceTree = "<group>"; };
 		B07776882C0C3FD5004C1F2C /* Combine+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Combine+UIKit.swift"; sourceTree = "<group>"; };
+		B077768B2C0C4018004C1F2C /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		B077768C2C0C4018004C1F2C /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		D54CC825432A526D074BFF43 /* Pods-TaiperTravelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiperTravelTests.debug.xcconfig"; path = "Target Support Files/Pods-TaiperTravelTests/Pods-TaiperTravelTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FEFFE2F58E8ED903F3023AF5 /* Pods-TaiperTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiperTravel.release.xcconfig"; path = "Target Support Files/Pods-TaiperTravel/Pods-TaiperTravel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,7 +174,8 @@
 				B07776572C076557004C1F2C /* Common */,
 				B07776582C076564004C1F2C /* Core */,
 				B07776592C07656B004C1F2C /* Data */,
-				B077765A2C076572004C1F2C /* UI */,
+				B077768A2C0C3FFD004C1F2C /* View */,
+				B077765A2C076572004C1F2C /* Page */,
 				B077765B2C07657E004C1F2C /* Extension */,
 				B077765C2C07658B004C1F2C /* Resources */,
 				B077765D2C0765CF004C1F2C /* Util */,
@@ -222,14 +227,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		B077765A2C076572004C1F2C /* UI */ = {
+		B077765A2C076572004C1F2C /* Page */ = {
 			isa = PBXGroup;
 			children = (
 				B07776602C076923004C1F2C /* Launch */,
 				B07776632C076A3A004C1F2C /* Base */,
 				B077765F2C076918004C1F2C /* Home */,
 			);
-			path = UI;
+			path = Page;
 			sourceTree = "<group>";
 		};
 		B077765B2C07657E004C1F2C /* Extension */ = {
@@ -321,6 +326,23 @@
 				B07776862C0B7EF6004C1F2C /* EventNewsResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		B077768A2C0C3FFD004C1F2C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B077768F2C0C4CD4004C1F2C /* Loading */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B077768F2C0C4CD4004C1F2C /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				B077768C2C0C4018004C1F2C /* LoadingView.swift */,
+				B077768B2C0C4018004C1F2C /* LoadingView.xib */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 		E00947FF622D2553D1A97B1D /* Frameworks */ = {
@@ -443,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B07776302C075F16004C1F2C /* Assets.xcassets in Resources */,
+				B077768D2C0C4018004C1F2C /* LoadingView.xib in Resources */,
 				B07776332C075F16004C1F2C /* Base in Resources */,
 				B077762E2C075F14004C1F2C /* Base in Resources */,
 			);
@@ -575,6 +598,7 @@
 				B07776782C0A9F85004C1F2C /* Codable+Extension.swift in Sources */,
 				B077766B2C08AF15004C1F2C /* ApiManager.swift in Sources */,
 				B07776652C076A53004C1F2C /* BaseViewController.swift in Sources */,
+				B077768E2C0C4018004C1F2C /* LoadingView.swift in Sources */,
 				B07776762C08B11A004C1F2C /* CommonName.swift in Sources */,
 				B07776872C0B7EF6004C1F2C /* EventNewsResponse.swift in Sources */,
 				B077762B2C075F14004C1F2C /* HomeViewController.swift in Sources */,
