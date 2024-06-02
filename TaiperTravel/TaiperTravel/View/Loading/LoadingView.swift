@@ -31,7 +31,6 @@ class LoadingView: UIView {
         contentView = view
         self.addSubview(contentView)
         
-        loadingContentView.layer.cornerRadius = 20
-        loadingContentView.layer.masksToBounds = true
+        loadingContentView.cornerRadius()
     }
 }

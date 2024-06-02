@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 import Alamofire
 import Combine
 
@@ -25,6 +26,25 @@ extension ApiManager {
     public func requestEventNews(page: Int) -> ApiResultPublisher<EventNewsResponse> {
         let requestData = EventNewsRequest(page: page)
         return sendApi(service: .EventNews, parameters: requestData)
+    }
+    
+    public func downloadImage(url: URL) -> AnyPublisher<(img: UIImage, url: URL), ApiError> {
+        Future { promise in
+            AF.request(url).responseData { response in
+                if let _ = response.error {
+                    return promise(.failure(.connect(nil, CommonName.ApiErrorMessage.other.rawValue, nil)))
+                }
+                guard
+                    let data = response.data,
+                    let image = UIImage(data: data),
+                    let url = response.response?.url
+                else {
+                    return promise(.failure(.connect(nil, CommonName.ApiErrorMessage.other.rawValue, nil)))
+                }
+                
+                return promise(.success((image, url)))
+            }
+        }.eraseToAnyPublisher()
     }
 }
 

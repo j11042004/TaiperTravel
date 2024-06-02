@@ -69,16 +69,22 @@ extension AttractionsResponse {
         let src: String
         let subject: String
         let ext: String
+        
+        var url: URL { URL(string: src)! }
     }
     
     struct File: Codable {
         let src: String
         let subject: String
         let ext: String
+        
+        var url: URL { URL(string: src)! }
     }
     
     struct LinkInfo: Codable {
         let src: String
         let subject: String
+        
+        var url: URL { URL(string: src)! }
     }
 }

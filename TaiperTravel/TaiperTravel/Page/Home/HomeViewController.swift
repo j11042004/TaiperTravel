@@ -9,9 +9,15 @@ import UIKit
 import Combine
 
 class HomeViewController: BaseViewController {
+    @IBOutlet private weak var tableView: UITableView!
+    
     private var viewModel: HomeViewModel!
     /// combine 回收 Set
     private var cancellableSet = Set<AnyCancellable>()
+    
+    private let headerName = String(describing: HomeInfoTableHeader.self)
+    private let attractionCellName = String(describing: AttractionTableCell.self)
+    private let newsCellName = String(describing: NewsTableCell.self)
     
     override func viewDidLoad() {
         guard let _ = viewModel else  { fatalError("\(#file)'s ViewModel is empty") }
@@ -24,6 +30,8 @@ class HomeViewController: BaseViewController {
 extension HomeViewController {
     override func setupUI() {
         super.setupUI()
+        self.title = self.viewModel.pageTitle
+        setupTableView()
     }
     
     override func subscribeViewModel() {
@@ -46,18 +54,11 @@ extension HomeViewController {
             }
             .store(in: &cancellableSet)
         
-        viewModel.reloadAttractionSubject
+        Publishers.CombineLatest(viewModel.reloadAttractionSubject, viewModel.reloadNewsSubject)
             .receive(on: DispatchQueue.main)
             .withUnretained(self)
             .sink { (weakSelf, _) in
-                NSLog("reloadAttractionSubject")
-            }
-            .store(in: &cancellableSet)
-        viewModel.reloadNewsSubject
-            .receive(on: DispatchQueue.main)
-            .withUnretained(self)
-            .sink { (weakSelf, _) in
-                NSLog("reloadNewsSubject")
+                weakSelf.tableView.reloadData()
             }
             .store(in: &cancellableSet)
     }
@@ -77,7 +78,71 @@ extension HomeViewController {
 //MARK: - Private Func
 extension HomeViewController {
     private func loadTravelData() {
-        self.viewModel.loadAttraction()
-        self.viewModel.loadEventNews()
+        self.viewModel.apiLoadAttraction()
+        self.viewModel.apiLoadEventNews()
+    }
+    
+    //MARK: UI
+    private func setupTableView() {
+        if #available(iOS 15.0, *) { tableView.sectionHeaderTopPadding = 0 }
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.register(.init(nibName: headerName, bundle: nil), forHeaderFooterViewReuseIdentifier: headerName)
+        tableView.register(.init(nibName: attractionCellName, bundle: nil), forCellReuseIdentifier: attractionCellName)
+        tableView.register(.init(nibName: newsCellName, bundle: nil), forCellReuseIdentifier: newsCellName)
+    }
+}
+
+//MARK: - TableViewDelegate
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}
+
+//MARK: - UITableViewDataSource
+extension HomeViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.homePageInfos.count
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let pageInfo = viewModel.vcLoadHomePageInfo(section) else { return 0 }
+        switch pageInfo.type {
+        case .attraction: return pageInfo.attractions.count
+        case .news: return pageInfo.news.count
+        }
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let pageType = viewModel.vcLoadHomePageInfo(indexPath.section)?.type else { return UITableViewCell() }
+        switch pageType {
+        case .attraction: do {
+            let attractionTableCell = tableView.dequeueReusableCell(withIdentifier: attractionCellName, for: indexPath) as! AttractionTableCell
+            let attraction = viewModel.vcLoadAttraction(indexPath: indexPath)
+            let image = attraction?.imageInfos.first?.image
+            attractionTableCell.setup(title: attraction?.name ?? "", message: attraction?.introduction ?? "", image: image)
+            return attractionTableCell
+        }
+        case .news: do {
+            let newsTableCell = tableView.dequeueReusableCell(withIdentifier: newsCellName, for: indexPath) as! NewsTableCell
+            let news = viewModel.vcLoadNews(indexPath: indexPath)
+            newsTableCell.setup(title: news?.title ?? "", message: news?.message ?? "")
+            return newsTableCell
+        }
+        }
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let pageInfo = viewModel.vcLoadHomePageInfo(section) else { return nil }
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerName) as! HomeInfoTableHeader
+        header.setup(title: pageInfo.type.title)
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }

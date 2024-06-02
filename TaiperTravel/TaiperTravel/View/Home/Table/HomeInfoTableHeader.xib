@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeInfoTableHeader" customModule="TaiperTravel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVw-jQ-2jy">
+                    <rect key="frame" x="15.000000000000004" y="10" width="41.333333333333343" height="30"/>
+                    <color key="backgroundColor" name="NavigationBarColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="XxQ-bO-6qE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="WhiteTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dVw-jQ-2jy" secondAttribute="trailing" constant="15" id="Can-bb-vO6"/>
+                <constraint firstItem="dVw-jQ-2jy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Rxh-J6-GMX"/>
+                <constraint firstItem="dVw-jQ-2jy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="pwi-jZ-NG9"/>
+                <constraint firstAttribute="bottom" secondItem="dVw-jQ-2jy" secondAttribute="bottom" constant="10" id="wsh-SO-d8S"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="titleLabel" destination="dVw-jQ-2jy" id="Rqs-iA-sPr"/>
+            </connections>
+            <point key="canvasLocation" x="136.64122137404578" y="13.380281690140846"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="NavigationBarColor">
+            <color red="0.53333336109999996" green="0.69019609689999994" blue="0.91764706370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="WhiteTextColor">
+            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
