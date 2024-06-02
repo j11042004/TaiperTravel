@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum ApiError: Error {
     case connect(_ code: String?, _ message: String?, _ error: Error?)
@@ -31,5 +32,12 @@ enum Language: String {
     case th = "th"
     /// 越南文
     case vi = "vi"
+}
 
+enum CustomColor: String {
+    case blackTextColor = "BlackTextColor"
+    case navigationBarColor = "NavigationBarColor"
+    case whiteTextColor = "WhiteTextColor"
+    
+    var color: UIColor? { .init(named: self.rawValue) }
 }

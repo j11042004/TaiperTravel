@@ -18,8 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let rootWindow = UIWindow(windowScene: windowScene)
-        let rootVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: String(describing: HomeViewController.self)) as! HomeViewController
-        rootVC.setup(viewModel: HomeViewModel())
+        
+        let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let rootVC = homeStoryboard.instantiateInitialViewController() as! UINavigationController
+        let homeVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: String(describing: HomeViewController.self)) as! HomeViewController
+        homeVC.setup(viewModel: HomeViewModel())
+        rootVC.setViewControllers([homeVC], animated: false)
+        
         rootWindow.rootViewController = rootVC
         self.window = rootWindow
         window?.makeKeyAndVisible()

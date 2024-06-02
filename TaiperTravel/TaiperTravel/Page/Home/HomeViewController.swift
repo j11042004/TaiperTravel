@@ -22,6 +22,10 @@ class HomeViewController: BaseViewController {
 
 //MARK: - override Func
 extension HomeViewController {
+    override func setupUI() {
+        super.setupUI()
+    }
+    
     override func subscribeViewModel() {
         self.viewModel.$showLoading
             .receive(on: DispatchQueue.main)
@@ -70,7 +74,7 @@ extension HomeViewController {
     }
 }
 
-//MARK - Private Func
+//MARK: - Private Func
 extension HomeViewController {
     private func loadTravelData() {
         self.viewModel.loadAttraction()
