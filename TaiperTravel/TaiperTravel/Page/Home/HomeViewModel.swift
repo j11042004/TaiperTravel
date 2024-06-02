@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class HomeViewModel: BaseViewModel {
-    public var pageTitle: String { CommonName.Page.Title.home.rawValue }
+    public var pageTitle: String { CommonName.Page.Title.home.string }
     
     //MARK: Combine
     private(set) var reloadAttractionSubject: PassthroughSubject<Void, Never> = .init()

@@ -32,14 +32,14 @@ extension ApiManager {
         Future { promise in
             AF.request(url).responseData { response in
                 if let _ = response.error {
-                    return promise(.failure(.connect(nil, CommonName.ApiErrorMessage.other.rawValue, nil)))
+                    return promise(.failure(.connect(nil, CommonName.ApiErrorMessage.other.string, nil)))
                 }
                 guard
                     let data = response.data,
                     let image = UIImage(data: data),
                     let url = response.response?.url
                 else {
-                    return promise(.failure(.connect(nil, CommonName.ApiErrorMessage.other.rawValue, nil)))
+                    return promise(.failure(.connect(nil, CommonName.ApiErrorMessage.other.string, nil)))
                 }
                 
                 return promise(.success((image, url)))
@@ -73,19 +73,19 @@ extension ApiManager {
                 let httpResponse = dataResponse.response
                 let responseCode = httpResponse?.statusCode ?? 0
                 if responseCode != 200 {
-                    let apiError = ApiError.connect("\(responseCode)", CommonName.ApiErrorMessage.other.rawValue, nil)
+                    let apiError = ApiError.connect("\(responseCode)", CommonName.ApiErrorMessage.other.string, nil)
                     return promise(.failure(apiError))
                 }
                     
                 guard let data = dataResponse.data else {
-                    return promise(.failure(.resultFail("\(responseCode)", CommonName.DataFail.empty.rawValue, nil)))
+                    return promise(.failure(.resultFail("\(responseCode)", CommonName.DataFail.empty.string, nil)))
                 }
                 
                 do {
                     let result = try JSONDecoder().decode(BaseResponse<T>.self, from: data)
                     return promise(.success(result))
                 } catch {
-                    return promise(.failure(.resultFail("\(responseCode)", CommonName.DataFail.parse.rawValue, data)))
+                    return promise(.failure(.resultFail("\(responseCode)", CommonName.DataFail.parse.string, data)))
                 }
             }
         }.eraseToAnyPublisher()
@@ -103,6 +103,6 @@ private extension ApiError {
             messageType = .internetFail
         default: break
         }
-        return ApiError.connect("(\(error.code))", messageType.rawValue, error)
+        return ApiError.connect("(\(error.code))", messageType.string, error)
     }
 }

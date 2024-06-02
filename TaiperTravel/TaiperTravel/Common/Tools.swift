@@ -14,9 +14,9 @@ struct Tools {
     /// - Parameters:
     ///   - title: 預設 title 為 "訊息"
     ///   - buttonTitle: 預設 Button Title 為 確定
-    public static func alertOneSelWith(title: String = CommonName.AlertInfo.message.rawValue,
+    public static func alertOneSelWith(title: String = CommonName.AlertInfo.message.string,
                                        message: String,
-                                       buttonTitle: String = CommonName.AlertInfo.sure.rawValue,
+                                       buttonTitle: String = CommonName.AlertInfo.sure.string,
                                        confirm: (()-> Void)?) -> UIAlertController {
         let alert = alertWith(title: title, message: message, leftTitle: buttonTitle, rightTitle: nil, leftConfirm: confirm)
         return alert
@@ -26,7 +26,7 @@ struct Tools {
     /// - Parameters:
     ///   - cancelConfirm: 取消 Call back
     ///   - sureConfirm: 確認 Call back
-    public static func alert(title: String = CommonName.AlertInfo.message.rawValue,
+    public static func alert(title: String = CommonName.AlertInfo.message.string,
                              message: String,
                              cancelConfirm: (()-> Void)? = nil,
                              sureConfirm: (()-> Void)? = nil) -> UIAlertController {
@@ -40,10 +40,10 @@ struct Tools {
     ///   - rightTitle: 預設 右 button 為 "確定"
     ///   - leftConfirm: 預設為 nil
     ///   - rightConfirm: 預設為 nil
-    public static func alertWith(title: String = CommonName.AlertInfo.message.rawValue,
+    public static func alertWith(title: String = CommonName.AlertInfo.message.string,
                                  message: String,
-                                 leftTitle: String? = CommonName.AlertInfo.cancel.rawValue,
-                                 rightTitle: String? = CommonName.AlertInfo.sure.rawValue,
+                                 leftTitle: String? = CommonName.AlertInfo.cancel.string,
+                                 rightTitle: String? = CommonName.AlertInfo.sure.string,
                                  leftConfirm: (()-> Void)? = nil,
                                  rightConfirm: (()-> Void)? = nil) -> UIAlertController {
         var actions = [UIAlertAction]()

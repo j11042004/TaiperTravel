@@ -13,8 +13,8 @@ struct HomePageInfo {
         case news
         var title: String {
             switch self {
-            case .attraction: return CommonName.Page.Home.attraction.rawValue
-            case .news: return CommonName.Page.Home.news.rawValue
+            case .attraction: return CommonName.Page.Home.attraction.string
+            case .news: return CommonName.Page.Home.news.string
             }
         }
     }
