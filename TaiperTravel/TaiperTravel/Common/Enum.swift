@@ -35,9 +35,11 @@ enum Language: String {
 }
 
 enum CustomColor: String {
-    case blackTextColor = "BlackTextColor"
+    case grayTextColor = "GrayTextColor"
     case navigationBarColor = "NavigationBarColor"
     case whiteTextColor = "WhiteTextColor"
+    case blueTextColor = "BlueTextColor"
+    case backgroundColor = "BackgroundColor"
     
     var color: UIColor? { .init(named: self.rawValue) }
 }
