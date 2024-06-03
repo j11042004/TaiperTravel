@@ -21,15 +21,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTq-33-p3D">
                         <rect key="frame" x="10" y="0.0" width="417" height="240"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cja-vZ-lrX">
-                                <rect key="frame" x="150" y="15" width="48" height="24"/>
-                                <color key="backgroundColor" name="NavigationBarColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" name="WhiteTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEQ-lI-7Bl">
-                                <rect key="frame" x="155" y="49" width="242" height="18"/>
+                                <rect key="frame" x="155" y="59" width="242" height="18"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" name="BlackTextColor"/>
@@ -42,20 +35,39 @@
                                     <constraint firstAttribute="width" secondItem="XNU-95-ktx" secondAttribute="height" multiplier="16:9" id="9aK-QP-aTF"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HI9-Aa-6vD">
+                                <rect key="frame" x="150" y="15" width="58" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cja-vZ-lrX">
+                                        <rect key="frame" x="5" y="5" width="48" height="24"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" name="WhiteTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="NavigationBarColor"/>
+                                <constraints>
+                                    <constraint firstItem="cja-vZ-lrX" firstAttribute="top" secondItem="HI9-Aa-6vD" secondAttribute="top" constant="5" id="6HW-1g-HFg"/>
+                                    <constraint firstItem="cja-vZ-lrX" firstAttribute="leading" secondItem="HI9-Aa-6vD" secondAttribute="leading" constant="5" id="SAg-gq-TOJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="cja-vZ-lrX" secondAttribute="trailing" constant="5" id="ftB-4q-KTH"/>
+                                    <constraint firstAttribute="bottom" secondItem="cja-vZ-lrX" secondAttribute="bottom" constant="5" id="reK-W0-UHi"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="XNU-95-ktx" firstAttribute="top" secondItem="NTq-33-p3D" secondAttribute="top" constant="15" id="2I7-rM-ltg"/>
+                            <constraint firstItem="HI9-Aa-6vD" firstAttribute="leading" secondItem="XNU-95-ktx" secondAttribute="trailing" constant="10" id="5tt-qB-JdU"/>
+                            <constraint firstItem="NEQ-lI-7Bl" firstAttribute="leading" secondItem="HI9-Aa-6vD" secondAttribute="leading" constant="5" id="967-io-dg9"/>
+                            <constraint firstItem="NEQ-lI-7Bl" firstAttribute="top" secondItem="HI9-Aa-6vD" secondAttribute="bottom" constant="10" id="Hky-oz-WOK"/>
                             <constraint firstItem="XNU-95-ktx" firstAttribute="leading" secondItem="NTq-33-p3D" secondAttribute="leading" constant="15" id="JYk-Kw-wHH"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="NEQ-lI-7Bl" secondAttribute="bottom" constant="5" id="Jmg-wd-FuR"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XNU-95-ktx" secondAttribute="bottom" constant="5" id="Lsq-Hi-UKz"/>
                             <constraint firstItem="XNU-95-ktx" firstAttribute="width" secondItem="NTq-33-p3D" secondAttribute="width" multiplier="0.3" id="Q93-BJ-8bD"/>
-                            <constraint firstItem="NEQ-lI-7Bl" firstAttribute="leading" secondItem="cja-vZ-lrX" secondAttribute="leading" constant="5" id="Xsx-fU-T2t"/>
                             <constraint firstAttribute="trailing" secondItem="NEQ-lI-7Bl" secondAttribute="trailing" constant="20" id="bmF-h5-28g"/>
-                            <constraint firstItem="cja-vZ-lrX" firstAttribute="top" secondItem="XNU-95-ktx" secondAttribute="top" id="cWu-IJ-Rik"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cja-vZ-lrX" secondAttribute="trailing" constant="10" id="ckw-Vu-a2x"/>
-                            <constraint firstItem="NEQ-lI-7Bl" firstAttribute="top" secondItem="cja-vZ-lrX" secondAttribute="bottom" constant="10" id="dCK-lS-8ro"/>
-                            <constraint firstItem="cja-vZ-lrX" firstAttribute="leading" secondItem="XNU-95-ktx" secondAttribute="trailing" constant="10" id="zeP-Ah-uoH"/>
+                            <constraint firstItem="HI9-Aa-6vD" firstAttribute="top" secondItem="NTq-33-p3D" secondAttribute="top" constant="15" id="ele-pX-oFD"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HI9-Aa-6vD" secondAttribute="trailing" constant="10" id="lbP-dR-dYx"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -73,6 +85,7 @@
                 <outlet property="imgView" destination="XNU-95-ktx" id="iFi-bT-0ev"/>
                 <outlet property="infoView" destination="NTq-33-p3D" id="bfO-7w-n3o"/>
                 <outlet property="messageLabel" destination="NEQ-lI-7Bl" id="C3x-tv-eMd"/>
+                <outlet property="titleContentView" destination="HI9-Aa-6vD" id="Dp6-rP-Ku6"/>
                 <outlet property="titleLabel" destination="cja-vZ-lrX" id="7Oo-Nq-n4g"/>
             </connections>
             <point key="canvasLocation" x="225.19083969465649" y="94.014084507042256"/>
@@ -80,16 +93,16 @@
     </objects>
     <resources>
         <namedColor name="BackgroundColor">
-            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BlackTextColor">
-            <color red="0.56862747670000002" green="0.56862747670000002" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.5690000057220459" green="0.5690000057220459" blue="0.5690000057220459" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="NavigationBarColor">
-            <color red="0.53333336109999996" green="0.69019609689999994" blue="0.91764706370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.53299999237060547" green="0.68999999761581421" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="WhiteTextColor">
-            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

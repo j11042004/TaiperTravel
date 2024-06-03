@@ -10,6 +10,7 @@ import UIKit
 class AttractionTableCell: UITableViewCell {
     
     @IBOutlet private weak var infoView: UIView!
+    @IBOutlet private weak var titleContentView: UIView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var messageLabel: UILabel!
     @IBOutlet private weak var imgView: UIImageView!
@@ -27,10 +28,11 @@ class AttractionTableCell: UITableViewCell {
     }
     
     public func setup(title: String, message: String, image: UIImage?) {
-        self.titleLabel.text = " \(title) "
+        self.titleLabel.text = title
         self.messageLabel.text = message
         self.imgView.image = image
         
-        titleLabel.cornerRadius(radii: 5)
+        let radii = self.titleLabel.bounds.height / 4
+        self.titleContentView.cornerRadius(radii: radii)
     }
 }

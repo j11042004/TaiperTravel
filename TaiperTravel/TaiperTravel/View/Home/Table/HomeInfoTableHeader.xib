@@ -12,40 +12,53 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeInfoTableHeader" customModule="TaiperTravel" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVw-jQ-2jy">
-                    <rect key="frame" x="15.000000000000004" y="10" width="41.333333333333343" height="30"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xd4-IG-1lZ">
+                    <rect key="frame" x="15.000000000000004" y="10" width="51.333333333333343" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVw-jQ-2jy">
+                            <rect key="frame" x="5" y="5" width="41.333333333333336" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="XxQ-bO-6qE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" name="WhiteTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" name="NavigationBarColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="XxQ-bO-6qE"/>
+                        <constraint firstAttribute="bottom" secondItem="dVw-jQ-2jy" secondAttribute="bottom" constant="5" id="JzQ-dj-Zyg"/>
+                        <constraint firstAttribute="trailing" secondItem="dVw-jQ-2jy" secondAttribute="trailing" constant="5" id="N2O-V0-Htv"/>
+                        <constraint firstItem="dVw-jQ-2jy" firstAttribute="leading" secondItem="Xd4-IG-1lZ" secondAttribute="leading" constant="5" id="NNv-qD-GhD"/>
+                        <constraint firstItem="dVw-jQ-2jy" firstAttribute="top" secondItem="Xd4-IG-1lZ" secondAttribute="top" constant="5" id="zaX-ei-dgH"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" name="WhiteTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dVw-jQ-2jy" secondAttribute="trailing" constant="15" id="Can-bb-vO6"/>
-                <constraint firstItem="dVw-jQ-2jy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Rxh-J6-GMX"/>
-                <constraint firstItem="dVw-jQ-2jy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="pwi-jZ-NG9"/>
-                <constraint firstAttribute="bottom" secondItem="dVw-jQ-2jy" secondAttribute="bottom" constant="10" id="wsh-SO-d8S"/>
+                <constraint firstItem="Xd4-IG-1lZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="H69-Mr-Lh9"/>
+                <constraint firstItem="Xd4-IG-1lZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="m26-e8-L8k"/>
+                <constraint firstAttribute="bottom" secondItem="Xd4-IG-1lZ" secondAttribute="bottom" constant="10" id="qpD-8B-QPE"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xd4-IG-1lZ" secondAttribute="trailing" constant="15" id="t6o-uo-aEr"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="titleContentView" destination="Xd4-IG-1lZ" id="nM7-yu-hS6"/>
                 <outlet property="titleLabel" destination="dVw-jQ-2jy" id="Rqs-iA-sPr"/>
             </connections>
-            <point key="canvasLocation" x="136.64122137404578" y="13.380281690140846"/>
+            <point key="canvasLocation" x="136.64122137404578" y="16.901408450704228"/>
         </view>
     </objects>
     <resources>
         <namedColor name="NavigationBarColor">
-            <color red="0.53333336109999996" green="0.69019609689999994" blue="0.91764706370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.53299999237060547" green="0.68999999761581421" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="WhiteTextColor">
-            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
