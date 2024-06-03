@@ -90,6 +90,10 @@ extension HomeViewModel {
         switch selectInfo.type {
         case .attraction:
             guard let attraction = selectInfo.attractions[safe: indexPath.row] else { return }
+            let attractionviewModel = AttractionDetailViewModel(attractionInfo: attraction)
+            let attractionDetailVC = AttractionDetailViewController(nibName: String(describing: AttractionDetailViewController.self), bundle: nil)
+            attractionDetailVC.setup(viewModel: attractionviewModel)
+            self.showNextVC.send(attractionDetailVC)
             
         case .news:
             guard 

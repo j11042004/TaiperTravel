@@ -61,7 +61,7 @@ extension HomeViewController {
             .sink { (weakSelf, message) in
                 weakSelf.viewModel.showLoading(false)
                 let alert = Tools.alertOneSelWith(message: message) { }
-                self.navigationController?.pushViewController(alert, animated: true)
+                weakSelf.navigationController?.pushViewController(alert, animated: true)
             }
             .store(in: &cancellableSet)
         

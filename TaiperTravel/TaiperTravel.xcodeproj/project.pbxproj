@@ -14,6 +14,9 @@
 		B02F74EC2C0CAAB400B549C7 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02F74EB2C0CAAB400B549C7 /* WebViewController.xib */; };
 		B02F74ED2C0CAAB400B549C7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F74EA2C0CAAB400B549C7 /* WebViewController.swift */; };
 		B02F74F02C0CABB500B549C7 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F74EF2C0CABB500B549C7 /* WebViewModel.swift */; };
+		B02F74F42C0DF09100B549C7 /* AttractionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02F74F32C0DF09100B549C7 /* AttractionDetailViewController.xib */; };
+		B02F74F52C0DF09100B549C7 /* AttractionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F74F22C0DF09100B549C7 /* AttractionDetailViewController.swift */; };
+		B02F74F72C0DF0A400B549C7 /* AttractionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F74F62C0DF0A400B549C7 /* AttractionDetailViewModel.swift */; };
 		B07776272C075F14004C1F2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776262C075F14004C1F2C /* AppDelegate.swift */; };
 		B07776292C075F14004C1F2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776282C075F14004C1F2C /* SceneDelegate.swift */; };
 		B077762B2C075F14004C1F2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B077762A2C075F14004C1F2C /* HomeViewController.swift */; };
@@ -85,6 +88,9 @@
 		B02F74EA2C0CAAB400B549C7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B02F74EB2C0CAAB400B549C7 /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		B02F74EF2C0CABB500B549C7 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
+		B02F74F22C0DF09100B549C7 /* AttractionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionDetailViewController.swift; sourceTree = "<group>"; };
+		B02F74F32C0DF09100B549C7 /* AttractionDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttractionDetailViewController.xib; sourceTree = "<group>"; };
+		B02F74F62C0DF0A400B549C7 /* AttractionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionDetailViewModel.swift; sourceTree = "<group>"; };
 		B07776232C075F14004C1F2C /* TaiperTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaiperTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07776262C075F14004C1F2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B07776282C075F14004C1F2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +190,16 @@
 			path = Web;
 			sourceTree = "<group>";
 		};
+		B02F74F12C0DF06E00B549C7 /* AttractionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B02F74F22C0DF09100B549C7 /* AttractionDetailViewController.swift */,
+				B02F74F32C0DF09100B549C7 /* AttractionDetailViewController.xib */,
+				B02F74F62C0DF0A400B549C7 /* AttractionDetailViewModel.swift */,
+			);
+			path = AttractionDetail;
+			sourceTree = "<group>";
+		};
 		B077761A2C075F14004C1F2C = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +292,7 @@
 				B07776632C076A3A004C1F2C /* Base */,
 				B077765F2C076918004C1F2C /* Home */,
 				B02F74EE2C0CAAB900B549C7 /* Web */,
+				B02F74F12C0DF06E00B549C7 /* AttractionDetail */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -554,6 +571,7 @@
 				B07776992C0C4F82004C1F2C /* AttractionTableCell.xib in Resources */,
 				B02F74EC2C0CAAB400B549C7 /* WebViewController.xib in Resources */,
 				B07776332C075F16004C1F2C /* Base in Resources */,
+				B02F74F42C0DF09100B549C7 /* AttractionDetailViewController.xib in Resources */,
 				B077762E2C075F14004C1F2C /* Base in Resources */,
 				B07776A12C0C4FCF004C1F2C /* HomeInfoTableHeader.xib in Resources */,
 				B077769D2C0C4F9C004C1F2C /* NewsTableCell.xib in Resources */,
@@ -686,6 +704,7 @@
 			files = (
 				B07776782C0A9F85004C1F2C /* Codable+Extension.swift in Sources */,
 				B077766B2C08AF15004C1F2C /* ApiManager.swift in Sources */,
+				B02F74F52C0DF09100B549C7 /* AttractionDetailViewController.swift in Sources */,
 				B07776652C076A53004C1F2C /* BaseViewController.swift in Sources */,
 				B07776A92C0C7269004C1F2C /* HomeAttraction.swift in Sources */,
 				B077768E2C0C4018004C1F2C /* LoadingView.swift in Sources */,
@@ -702,6 +721,7 @@
 				B07776272C075F14004C1F2C /* AppDelegate.swift in Sources */,
 				B02F74ED2C0CAAB400B549C7 /* WebViewController.swift in Sources */,
 				B077767F2C0B6555004C1F2C /* AttractionsRequest.swift in Sources */,
+				B02F74F72C0DF0A400B549C7 /* AttractionDetailViewModel.swift in Sources */,
 				B077767D2C0B652E004C1F2C /* ApiRequest.swift in Sources */,
 				B07776982C0C4F82004C1F2C /* AttractionTableCell.swift in Sources */,
 				B07776932C0C4F25004C1F2C /* HomePageInfo.swift in Sources */,
