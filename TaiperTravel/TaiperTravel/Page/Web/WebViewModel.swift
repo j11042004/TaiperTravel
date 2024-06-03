@@ -11,13 +11,12 @@ import UIKit
 import WebKit
 
 class WebViewModel: BaseViewModel {
-    public private(set) var pageTitle: String = ""
-    
     @Published private(set) var urlRequest: URLRequest
     
     init(title: String, url: URL) {
-        self.pageTitle = title
         self.urlRequest = URLRequest(url: url)
+        super.init()
+        self.pageTitle = title
     }
 }
 

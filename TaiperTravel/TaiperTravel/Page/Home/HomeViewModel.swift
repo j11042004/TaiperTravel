@@ -9,8 +9,6 @@ import Foundation
 import Combine
 
 class HomeViewModel: BaseViewModel {
-    public var pageTitle: String { CommonName.Page.Title.home.string }
-    
     //MARK: Combine
     private(set) var reloadAttractionSubject: PassthroughSubject<Void, Never> = .init()
     private(set) var reloadNewsSubject: PassthroughSubject<Void, Never> = .init()
@@ -54,6 +52,8 @@ class HomeViewModel: BaseViewModel {
 //MAR: - Public Func
 extension HomeViewModel {
     public func initData() {
+        self.pageTitle = CommonName.Page.Title.home.string
+        
         // 確定全資料 Api 有回來 再關閉 Loading
         Publishers.CombineLatest(reloadAttractionSubject, reloadNewsSubject)
             .delay(for: .seconds(0.1), scheduler: DispatchQueue.main)

@@ -28,11 +28,16 @@ class HomeViewController: BaseViewController {
 extension HomeViewController {
     override func setupUI() {
         super.setupUI()
-        self.title = self.viewModel.pageTitle
         setupTableView()
     }
     
     override func subscribeViewModel() {
+        self.viewModel.$pageTitle
+            .receive(on: DispatchQueue.main)
+            .compactMap({ $0 as String? })
+            .assign(to: \.title, on: self)
+            .store(in: &cancellableSet)
+        
         self.viewModel.showNextVC
             .receive(on: DispatchQueue.main)
             .withUnretained(self)

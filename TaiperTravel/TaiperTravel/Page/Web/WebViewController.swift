@@ -23,10 +23,15 @@ class WebViewController: BaseViewController {
 extension WebViewController {
     override func setupUI() {
         super.setupUI()
-        self.title = self.viewModel.pageTitle
     }
     
     override func subscribeViewModel() {
+        self.viewModel.$pageTitle
+            .receive(on: DispatchQueue.main)
+            .compactMap({ $0 as String? })
+            .assign(to: \.title, on: self)
+            .store(in: &cancellableSet)
+        
         self.viewModel.$showLoading
             .receive(on: DispatchQueue.main)
             .withUnretained(self)
