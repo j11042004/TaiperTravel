@@ -17,6 +17,9 @@
 		B02F74F42C0DF09100B549C7 /* AttractionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02F74F32C0DF09100B549C7 /* AttractionDetailViewController.xib */; };
 		B02F74F52C0DF09100B549C7 /* AttractionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F74F22C0DF09100B549C7 /* AttractionDetailViewController.swift */; };
 		B02F74F72C0DF0A400B549C7 /* AttractionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F74F62C0DF0A400B549C7 /* AttractionDetailViewModel.swift */; };
+		B02F75022C10945F00B549C7 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F75012C10945F00B549C7 /* ImageRepository.swift */; };
+		B02F75072C109EE100B549C7 /* AttractionDetailImageCollectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F75052C109EE100B549C7 /* AttractionDetailImageCollectCell.swift */; };
+		B02F75082C109EE100B549C7 /* AttractionDetailImageCollectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02F75062C109EE100B549C7 /* AttractionDetailImageCollectCell.xib */; };
 		B07776272C075F14004C1F2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776262C075F14004C1F2C /* AppDelegate.swift */; };
 		B07776292C075F14004C1F2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776282C075F14004C1F2C /* SceneDelegate.swift */; };
 		B077762B2C075F14004C1F2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B077762A2C075F14004C1F2C /* HomeViewController.swift */; };
@@ -56,7 +59,6 @@
 		B07776A72C0C6D94004C1F2C /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776A62C0C6D94004C1F2C /* Array+Extension.swift */; };
 		B07776A92C0C7269004C1F2C /* HomeAttraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776A82C0C7269004C1F2C /* HomeAttraction.swift */; };
 		B07776AB2C0C727B004C1F2C /* HomeNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776AA2C0C727B004C1F2C /* HomeNews.swift */; };
-		B07776AD2C0C8368004C1F2C /* AttractionImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776AC2C0C8368004C1F2C /* AttractionImageInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,9 @@
 		B02F74F22C0DF09100B549C7 /* AttractionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionDetailViewController.swift; sourceTree = "<group>"; };
 		B02F74F32C0DF09100B549C7 /* AttractionDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttractionDetailViewController.xib; sourceTree = "<group>"; };
 		B02F74F62C0DF0A400B549C7 /* AttractionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionDetailViewModel.swift; sourceTree = "<group>"; };
+		B02F75012C10945F00B549C7 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		B02F75052C109EE100B549C7 /* AttractionDetailImageCollectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionDetailImageCollectCell.swift; sourceTree = "<group>"; };
+		B02F75062C109EE100B549C7 /* AttractionDetailImageCollectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttractionDetailImageCollectCell.xib; sourceTree = "<group>"; };
 		B07776232C075F14004C1F2C /* TaiperTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaiperTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07776262C075F14004C1F2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B07776282C075F14004C1F2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,7 +139,6 @@
 		B07776A62C0C6D94004C1F2C /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		B07776A82C0C7269004C1F2C /* HomeAttraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAttraction.swift; sourceTree = "<group>"; };
 		B07776AA2C0C727B004C1F2C /* HomeNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNews.swift; sourceTree = "<group>"; };
-		B07776AC2C0C8368004C1F2C /* AttractionImageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionImageInfo.swift; sourceTree = "<group>"; };
 		D54CC825432A526D074BFF43 /* Pods-TaiperTravelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiperTravelTests.debug.xcconfig"; path = "Target Support Files/Pods-TaiperTravelTests/Pods-TaiperTravelTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FEFFE2F58E8ED903F3023AF5 /* Pods-TaiperTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiperTravel.release.xcconfig"; path = "Target Support Files/Pods-TaiperTravel/Pods-TaiperTravel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,6 +202,23 @@
 				B02F74F62C0DF0A400B549C7 /* AttractionDetailViewModel.swift */,
 			);
 			path = AttractionDetail;
+			sourceTree = "<group>";
+		};
+		B02F75032C109EA600B549C7 /* AttractionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B02F75042C109EB900B549C7 /* Collection */,
+			);
+			path = AttractionDetail;
+			sourceTree = "<group>";
+		};
+		B02F75042C109EB900B549C7 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				B02F75052C109EE100B549C7 /* AttractionDetailImageCollectCell.swift */,
+				B02F75062C109EE100B549C7 /* AttractionDetailImageCollectCell.xib */,
+			);
+			path = Collection;
 			sourceTree = "<group>";
 		};
 		B077761A2C075F14004C1F2C = {
@@ -278,7 +299,7 @@
 		B07776592C07656B004C1F2C /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				B07776AC2C0C8368004C1F2C /* AttractionImageInfo.swift */,
+				B02F75012C10945F00B549C7 /* ImageRepository.swift */,
 				B07776792C0B64F3004C1F2C /* Api */,
 				B07776902C0C4EFF004C1F2C /* Page */,
 			);
@@ -395,6 +416,7 @@
 			children = (
 				B077768F2C0C4CD4004C1F2C /* Loading */,
 				B07776942C0C4F4F004C1F2C /* Home */,
+				B02F75032C109EA600B549C7 /* AttractionDetail */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -574,6 +596,7 @@
 				B02F74F42C0DF09100B549C7 /* AttractionDetailViewController.xib in Resources */,
 				B077762E2C075F14004C1F2C /* Base in Resources */,
 				B07776A12C0C4FCF004C1F2C /* HomeInfoTableHeader.xib in Resources */,
+				B02F75082C109EE100B549C7 /* AttractionDetailImageCollectCell.xib in Resources */,
 				B077769D2C0C4F9C004C1F2C /* NewsTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,12 +732,12 @@
 				B07776A92C0C7269004C1F2C /* HomeAttraction.swift in Sources */,
 				B077768E2C0C4018004C1F2C /* LoadingView.swift in Sources */,
 				B07776872C0B7EF6004C1F2C /* EventNewsResponse.swift in Sources */,
+				B02F75022C10945F00B549C7 /* ImageRepository.swift in Sources */,
 				B077762B2C075F14004C1F2C /* HomeViewController.swift in Sources */,
 				B02F74F02C0CABB500B549C7 /* WebViewModel.swift in Sources */,
 				B07776692C08AB2E004C1F2C /* Publisher+Extension.swift in Sources */,
 				B077769F2C0C4FBC004C1F2C /* HomeInfoTableHeader.swift in Sources */,
 				B07776742C08B044004C1F2C /* Common.swift in Sources */,
-				B07776AD2C0C8368004C1F2C /* AttractionImageInfo.swift in Sources */,
 				B07776892C0C3FD6004C1F2C /* Combine+UIKit.swift in Sources */,
 				B07776A72C0C6D94004C1F2C /* Array+Extension.swift in Sources */,
 				B07776AB2C0C727B004C1F2C /* HomeNews.swift in Sources */,
@@ -728,6 +751,7 @@
 				B07776A52C0C6319004C1F2C /* View+Extension.swift in Sources */,
 				B02F74E92C0CA7BE00B549C7 /* CommonName.swift in Sources */,
 				B07776812C0B72F1004C1F2C /* BaseResponse.swift in Sources */,
+				B02F75072C109EE100B549C7 /* AttractionDetailImageCollectCell.swift in Sources */,
 				B077766D2C08AF5D004C1F2C /* Enum.swift in Sources */,
 				B077769C2C0C4F9C004C1F2C /* NewsTableCell.swift in Sources */,
 				B07776702C08B00C004C1F2C /* ApiService.swift in Sources */,

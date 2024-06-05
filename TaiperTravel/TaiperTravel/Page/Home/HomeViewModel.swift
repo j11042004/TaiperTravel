@@ -40,9 +40,6 @@ class HomeViewModel: BaseViewModel {
         }
     }
     
-    /// 已下載的 ImageSet
-    private var downloadedImageInfoSet: Set<AttractionImageInfo> = .init()
-    
     private let apiManager = ApiManager()
     
     private var attractionPageCount = 1
@@ -152,11 +149,11 @@ extension HomeViewModel {
 extension HomeViewModel {
     private func loadAttractionImages(_ attractions: [AttractionsResponse]) {
         self.attractionResponses.append(contentsOf: attractions)
-        //TODO: 下載所有第一張照片
+        // 下載所有第一張照片
         let willDownloadPublishers = attractionResponses
             .compactMap({ $0.images.first?.url })
             .filter({ url in
-                !downloadedImageInfoSet.contains { url == $0.url }
+                !ImageRepository.shared.imageInfoSet.contains { url == $0.url }
             })
             .compactMap({ apiManager.downloadImage(url: $0) })
         
@@ -164,12 +161,12 @@ extension HomeViewModel {
         Publishers.ZipMany(willDownloadPublishers)
             .receive(on: DispatchQueue.main)
             .compactMap({ infos in
-                infos.compactMap { AttractionImageInfo(url: $0.url, image: $0.img) }
+                infos.compactMap { ImageRepository.ImageInfo(url: $0.url, image: $0.img) }
             })
             .withUnretained(self)
             .sink(receiveCompletion: { [weak self] _ in
                 guard let self = self else { return }
-                let homeAttractions: [HomeAttraction] = attractions.compactMap({ .init($0, downloadImgSet: self.downloadedImageInfoSet) })
+                let homeAttractions: [HomeAttraction] = attractions.compactMap({ .init($0, downloadImgSet: ImageRepository.shared.imageInfoSet) })
                 let attractionPageInfo = HomePageInfo(type: .attraction, attractions: homeAttractions)
                 if let index = homePageInfos.firstIndex(where: { $0.type == .attraction }) {
                     homePageInfos[index] = attractionPageInfo
@@ -185,7 +182,7 @@ extension HomeViewModel {
                 
             }, receiveValue: { (weakSelf, imageInfos) in
                 imageInfos.forEach {
-                    weakSelf.downloadedImageInfoSet.insert($0)
+                    ImageRepository.shared.imageInfoSet.insert($0)
                 }
             })
             .store(in: &cancellableSet)

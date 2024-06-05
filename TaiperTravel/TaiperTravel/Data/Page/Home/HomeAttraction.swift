@@ -16,9 +16,9 @@ struct HomeAttraction {
     let address: String
     let webUrl: String
     
-    private(set) var imageInfos: [AttractionImageInfo]
+    private(set) var imageInfos: [ImageRepository.ImageInfo]
     
-    init(name: String, introduction: String, openTime: String, tel: String, address: String, webUrl: String, imageInfos: [AttractionImageInfo]) {
+    init(name: String, introduction: String, openTime: String, tel: String, address: String, webUrl: String, imageInfos: [ImageRepository.ImageInfo]) {
         self.name = name
         self.introduction = introduction
         self.openTime = openTime
@@ -28,7 +28,7 @@ struct HomeAttraction {
         self.imageInfos = imageInfos
     }
     
-    init(_ attractionsResponse: AttractionsResponse, downloadImgSet: Set<AttractionImageInfo>) {
+    init(_ attractionsResponse: AttractionsResponse, downloadImgSet: Set<ImageRepository.ImageInfo>) {
         self.name = attractionsResponse.name
         self.introduction = attractionsResponse.introduction
         
@@ -44,7 +44,16 @@ struct HomeAttraction {
     }
 }
 extension HomeAttraction {
-    public mutating func insert(imageInfos: [AttractionImageInfo]) {
-        self.imageInfos = Array(self.imageInfos) + imageInfos
+    public mutating func renewImages(from imageSet: Set<ImageRepository.ImageInfo>) {
+        for index in 0..<self.imageInfos.count {
+            guard 
+                let imageInfo = self.imageInfos[safe: index],
+                let newInfo = imageSet.first(where: { $0 == imageInfo }),
+                let newImg = newInfo.image,
+                newImg.size != .zero
+            else { continue }
+            
+            self.imageInfos[index] = newInfo
+        }
     }
 }

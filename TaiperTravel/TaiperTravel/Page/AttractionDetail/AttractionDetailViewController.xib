@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -13,8 +14,10 @@
             <connections>
                 <outlet property="addressBtn" destination="OyH-Zc-Wpq" id="42q-M5-Rwb"/>
                 <outlet property="addressLabel" destination="o3y-H9-7f1" id="g83-Jt-KiC"/>
+                <outlet property="imageCollectView" destination="L0B-jc-lQb" id="iJv-50-Q46"/>
                 <outlet property="introductionLabel" destination="FPg-E4-mWs" id="mwK-uY-zXT"/>
                 <outlet property="openTimeLabel" destination="EvA-Mm-na9" id="p3h-Qr-ANt"/>
+                <outlet property="pageControl" destination="Je2-Ac-aQh" id="ccT-15-T2E"/>
                 <outlet property="telBtn" destination="naH-k1-eQ9" id="Bq9-Eb-U9M"/>
                 <outlet property="telLabel" destination="dnr-Na-DON" id="DsI-M2-e5j"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -43,14 +46,42 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6a-x1-LVL">
-                            <rect key="frame" x="30" y="0.0" width="313" height="176"/>
+                            <rect key="frame" x="30" y="10" width="313" height="176"/>
+                            <subviews>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="L0B-jc-lQb">
+                                    <rect key="frame" x="0.0" y="0.0" width="313" height="176"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="knn-ZS-cDO">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Je2-Ac-aQh">
+                                    <rect key="frame" x="0.0" y="151" width="313" height="25"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="FNy-sT-Ilt"/>
+                                    </constraints>
+                                    <color key="pageIndicatorTintColor" name="GrayTextColor"/>
+                                    <color key="currentPageIndicatorTintColor" name="WhiteTextColor"/>
+                                </pageControl>
+                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="f6a-x1-LVL" secondAttribute="height" multiplier="16:9" id="EkE-Tm-D5j"/>
+                                <constraint firstItem="L0B-jc-lQb" firstAttribute="top" secondItem="f6a-x1-LVL" secondAttribute="top" id="MSp-lZ-reB"/>
+                                <constraint firstItem="L0B-jc-lQb" firstAttribute="leading" secondItem="f6a-x1-LVL" secondAttribute="leading" id="TUd-lw-dgN"/>
+                                <constraint firstAttribute="trailing" secondItem="L0B-jc-lQb" secondAttribute="trailing" id="Txg-ws-UB5"/>
+                                <constraint firstAttribute="trailing" secondItem="Je2-Ac-aQh" secondAttribute="trailing" id="Y2Z-HJ-FZI"/>
+                                <constraint firstAttribute="bottom" secondItem="Je2-Ac-aQh" secondAttribute="bottom" id="Yfj-5g-u0g"/>
+                                <constraint firstAttribute="bottom" secondItem="L0B-jc-lQb" secondAttribute="bottom" id="ekD-Pt-3H4"/>
+                                <constraint firstItem="Je2-Ac-aQh" firstAttribute="leading" secondItem="f6a-x1-LVL" secondAttribute="leading" id="sFc-gj-dti"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dlb-8C-HeQ">
-                            <rect key="frame" x="0.0" y="186" width="373" height="352"/>
+                            <rect key="frame" x="0.0" y="196" width="373" height="352"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7i-Bf-F4W">
                                     <rect key="frame" x="0.0" y="0.0" width="373" height="62"/>
@@ -255,7 +286,7 @@
                         <constraint firstItem="dlb-8C-HeQ" firstAttribute="top" secondItem="f6a-x1-LVL" secondAttribute="bottom" constant="10" id="foB-Y3-XDY"/>
                         <constraint firstItem="dlb-8C-HeQ" firstAttribute="leading" secondItem="vnr-wE-xtD" secondAttribute="leading" id="wS4-pJ-82h"/>
                         <constraint firstItem="cdT-37-GHw" firstAttribute="width" secondItem="vnr-wE-xtD" secondAttribute="width" id="xHk-UW-Ro7"/>
-                        <constraint firstItem="f6a-x1-LVL" firstAttribute="top" secondItem="vnr-wE-xtD" secondAttribute="top" id="xYJ-A6-sHE"/>
+                        <constraint firstItem="f6a-x1-LVL" firstAttribute="top" secondItem="vnr-wE-xtD" secondAttribute="top" constant="10" id="xYJ-A6-sHE"/>
                     </constraints>
                 </scrollView>
             </subviews>
@@ -280,5 +311,14 @@
         <namedColor name="BlueTextColor">
             <color red="0.4563964009" green="0.58419239519999999" blue="0.76448696849999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="GrayTextColor">
+            <color red="0.5690000057220459" green="0.5690000057220459" blue="0.5690000057220459" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="WhiteTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
