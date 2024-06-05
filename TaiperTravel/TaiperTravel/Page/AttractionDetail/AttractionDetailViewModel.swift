@@ -69,8 +69,11 @@ extension AttractionDetailViewModel {
     }
     
     public func callTel() {
-        //TODO: 處理區碼
+#if targetEnvironment(simulator)
+        showErrorAlert.send(CommonName.SimulatorMessage.callTel.string)
+#else
         Tools.openBrowser(url: "tel://\(tel)")
+#endif
     }
     
     public func showWebPage() {

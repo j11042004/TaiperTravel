@@ -54,7 +54,7 @@ extension HomeViewController {
             }
             .store(in: &cancellableSet)
         
-        self.viewModel.showApiErrorAlert
+        self.viewModel.showErrorAlert
             .compactMap({ $0 })
             .receive(on: DispatchQueue.main)
             .withUnretained(self)

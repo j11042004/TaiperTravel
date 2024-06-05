@@ -82,9 +82,6 @@ struct Tools {
         guard let url = URL(string: url) else {
             return
         }
-        guard #available(iOS 10.0, *) else {
-            return UIApplication.shared.open(url)
-        }
         UIApplication.shared.open(url, options: [:])
     }
 }

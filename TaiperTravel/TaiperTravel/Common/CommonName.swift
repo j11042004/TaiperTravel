@@ -40,6 +40,13 @@ extension CommonName {
             return self.rawValue
         }
     }
+    enum SimulatorMessage: String {
+        case callTel = "模擬器不支援打電話。"
+        
+        var string: String {
+            return self.rawValue
+        }
+    }
 }
 
 //MARK: - Page

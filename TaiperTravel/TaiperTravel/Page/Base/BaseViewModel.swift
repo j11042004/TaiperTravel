@@ -12,7 +12,7 @@ import Combine
 class BaseViewModel: NSObject {
     @Published var pageTitle: String = ""
     @Published private(set) var showLoading: Bool = false
-    let showApiErrorAlert: PassthroughSubject<String?, Never> = .init()
+    let showErrorAlert: PassthroughSubject<String?, Never> = .init()
     let showNextVC: PassthroughSubject<UIViewController, Never> = .init()
     
     /// combine 回收 Set
@@ -24,7 +24,7 @@ extension BaseViewModel {
     
     public func processApiAlert(error: ApiError, showAlert: Bool) {
         if !showAlert {
-            showApiErrorAlert.send(nil)
+            showErrorAlert.send(nil)
             return
         }
         
@@ -52,6 +52,6 @@ extension BaseViewModel {
         }
         
         let alertMessage = errorMessage ?? ""
-        showApiErrorAlert.send(alertMessage)
+        showErrorAlert.send(alertMessage)
     }
 }
