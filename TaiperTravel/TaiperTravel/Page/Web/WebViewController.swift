@@ -47,7 +47,7 @@ extension WebViewController {
             .sink { (weakSelf, message) in
                 weakSelf.viewModel.showLoading(false)
                 let alert = Tools.alertOneSelWith(message: message) { }
-                weakSelf.navigationController?.pushViewController(alert, animated: true)
+                weakSelf.present(alert, animated: true)
             }
             .store(in: &cancellableSet)
         
