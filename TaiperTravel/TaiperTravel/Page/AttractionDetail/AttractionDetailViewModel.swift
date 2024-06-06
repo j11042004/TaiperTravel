@@ -32,6 +32,10 @@ class AttractionDetailViewModel: BaseViewModel {
         self.tel = attractionInfo.tel
         self.webUrl = attractionInfo.webUrl
         self.introduction = attractionInfo.introduction
+        
+        if let firstImg = attractionInfo.imageInfos.first?.image {
+            self.images = [firstImg]
+        }
     }
 }
 
