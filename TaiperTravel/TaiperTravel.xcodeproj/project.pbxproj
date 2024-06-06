@@ -20,6 +20,7 @@
 		B02F75022C10945F00B549C7 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F75012C10945F00B549C7 /* ImageRepository.swift */; };
 		B02F75072C109EE100B549C7 /* AttractionDetailImageCollectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F75052C109EE100B549C7 /* AttractionDetailImageCollectCell.swift */; };
 		B02F75082C109EE100B549C7 /* AttractionDetailImageCollectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02F75062C109EE100B549C7 /* AttractionDetailImageCollectCell.xib */; };
+		B02F750A2C11EA5B00B549C7 /* CommonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F75092C11EA5B00B549C7 /* CommonImage.swift */; };
 		B07776272C075F14004C1F2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776262C075F14004C1F2C /* AppDelegate.swift */; };
 		B07776292C075F14004C1F2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776282C075F14004C1F2C /* SceneDelegate.swift */; };
 		B077762B2C075F14004C1F2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B077762A2C075F14004C1F2C /* HomeViewController.swift */; };
@@ -96,6 +97,7 @@
 		B02F75012C10945F00B549C7 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		B02F75052C109EE100B549C7 /* AttractionDetailImageCollectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionDetailImageCollectCell.swift; sourceTree = "<group>"; };
 		B02F75062C109EE100B549C7 /* AttractionDetailImageCollectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttractionDetailImageCollectCell.xib; sourceTree = "<group>"; };
+		B02F75092C11EA5B00B549C7 /* CommonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonImage.swift; sourceTree = "<group>"; };
 		B07776232C075F14004C1F2C /* TaiperTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaiperTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07776262C075F14004C1F2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B07776282C075F14004C1F2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			children = (
 				B07776732C08B044004C1F2C /* Common.swift */,
 				B02F74E82C0CA7BE00B549C7 /* CommonName.swift */,
+				B02F75092C11EA5B00B549C7 /* CommonImage.swift */,
 				B07776712C08B035004C1F2C /* Tools.swift */,
 				B077766C2C08AF5D004C1F2C /* Enum.swift */,
 			);
@@ -727,6 +730,7 @@
 			files = (
 				B07776782C0A9F85004C1F2C /* Codable+Extension.swift in Sources */,
 				B077766B2C08AF15004C1F2C /* ApiManager.swift in Sources */,
+				B02F750A2C11EA5B00B549C7 /* CommonImage.swift in Sources */,
 				B02F74F52C0DF09100B549C7 /* AttractionDetailViewController.swift in Sources */,
 				B07776652C076A53004C1F2C /* BaseViewController.swift in Sources */,
 				B07776A92C0C7269004C1F2C /* HomeAttraction.swift in Sources */,

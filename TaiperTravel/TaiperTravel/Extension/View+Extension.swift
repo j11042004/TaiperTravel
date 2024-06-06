@@ -8,6 +8,14 @@
 import Foundation
 import UIKit
 
+extension UIApplication {
+    var rootWindow: UIWindow? {
+        UIApplication.shared.connectedScenes
+            .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+            .last { $0.isKeyWindow }
+    }
+}
+
 extension UIView {
     /// 切圓角
     public func cornerRadius(radii: CGFloat = 20) {

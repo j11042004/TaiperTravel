@@ -16,7 +16,6 @@ class NewsTableCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         infoView.cornerRadius(radii: 10)
-        infoView.addBorder(width: 5, color: CustomColor.navigationBarColor.color)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,5 +27,6 @@ class NewsTableCell: UITableViewCell {
     public func setup(title: String, message: String) {
         self.titleLabel.text = title
         self.messageLabel.text = message
+        infoView.addBorder(width: 5, color: CustomColor.navigationBarColor.color)
     }
 }

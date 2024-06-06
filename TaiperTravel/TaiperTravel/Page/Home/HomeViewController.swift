@@ -10,6 +10,11 @@ import Combine
 
 class HomeViewController: BaseViewController {
     @IBOutlet private weak var tableView: UITableView!
+    private lazy var changeInterfaceStyleItemBtn: UIButton = {
+        let btn = UIButton(type: .custom)
+        btn.setImage(CommonImage.UserInterface.showDark.image, for: .normal)
+        return btn
+    }()
     
     private var viewModel: HomeViewModel!
     
@@ -26,9 +31,16 @@ class HomeViewController: BaseViewController {
 
 //MARK: - override Func
 extension HomeViewController {
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        resetUserInterfaceStyle()
+    }
+    
     override func setupUI() {
         super.setupUI()
         setupTableView()
+        setupBarItem()
+        resetUserInterfaceStyle()
     }
     
     override func subscribeViewModel() {
@@ -76,7 +88,22 @@ extension HomeViewController {
     
     override func bindData() {
         viewModel.initData()
+        
+        if #available(iOS 17.0, *) {
+            // iOS 17 監聽是否更換 Light/Dark mode
+            registerForTraitChanges([UITraitUserInterfaceStyle.self]) { (self: Self, previousTraitCollection: UITraitCollection) in
+                self.resetUserInterfaceStyle()
+            }
+        }
+        
+        changeInterfaceStyleItemBtn.publisher(for: .touchUpInside)
+            .withUnretained(self)
+            .sink { (weakSelf, _) in
+                weakSelf.viewModel.vcChangeAppearance()
+            }
+            .store(in: &cancellableSet)
     }
+    //MARK: - IBAction
 }
 
 //MARK: - Public Func
@@ -102,6 +129,17 @@ extension HomeViewController {
         tableView.register(.init(nibName: headerName, bundle: nil), forHeaderFooterViewReuseIdentifier: headerName)
         tableView.register(.init(nibName: attractionCellName, bundle: nil), forCellReuseIdentifier: attractionCellName)
         tableView.register(.init(nibName: newsCellName, bundle: nil), forCellReuseIdentifier: newsCellName)
+    }
+    private func setupBarItem() {
+        let changeInterfaceBarItem = UIBarButtonItem(customView: changeInterfaceStyleItemBtn)
+        self.navigationItem.rightBarButtonItems = [changeInterfaceBarItem]
+    }
+    
+    private func resetUserInterfaceStyle() {
+        tableView.reloadData()
+        
+        let interfaceStyleImgName: CommonImage.UserInterface = self.traitCollection.userInterfaceStyle == .dark ? .showLight : .showDark
+        changeInterfaceStyleItemBtn.setImage(interfaceStyleImgName.image, for: .normal)
     }
 }
 

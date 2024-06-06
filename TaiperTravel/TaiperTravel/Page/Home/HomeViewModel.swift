@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import UIKit
 
 class HomeViewModel: BaseViewModel {
     //MARK: Combine
@@ -62,6 +63,20 @@ extension HomeViewModel {
     }
     
     //MARK: UI
+    public func vcChangeAppearance() {
+        let interfaceStyle: UIUserInterfaceStyle
+        switch UIApplication.shared.rootWindow?.overrideUserInterfaceStyle {
+        case .dark:
+            interfaceStyle = .light
+        default:
+            interfaceStyle = .dark
+        }
+        UIApplication.shared.rootWindow?.overrideUserInterfaceStyle = interfaceStyle
+    }
+    public func vcChangeLanguage() {
+        
+    }
+    
     public func vcLoadHomePageInfo(_ index: Int) -> HomePageInfo? {
         return homePageInfos[safe: index]
     }

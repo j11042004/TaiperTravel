@@ -18,7 +18,6 @@ class AttractionTableCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         infoView.cornerRadius(radii: 10)
-        infoView.addBorder(width: 5, color: CustomColor.navigationBarColor.color)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -34,5 +33,6 @@ class AttractionTableCell: UITableViewCell {
         
         let radii = self.titleLabel.bounds.height / 4
         self.titleContentView.cornerRadius(radii: radii)
+        infoView.addBorder(width: 5, color: CustomColor.navigationBarColor.color)
     }
 }
