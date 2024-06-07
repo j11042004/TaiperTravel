@@ -1,0 +1,27 @@
+//MARK: - AlertInfo
+"AlertInfo.complete" = "Finalizar";
+"AlertInfo.message" = "información";
+"AlertInfo.sure" = "Seguro";
+"AlertInfo.cancel" = "Cancelar";
+"AlertInfo.confirm" = "confirmar";
+
+//MARK: - ApiErrorMessage
+"ApiErrorMessage.other" = "No se puede conectar al servidor.";
+"ApiErrorMessage.timedOut" = "Se agotó el tiempo de conexión.";
+"ApiErrorMessage.internetFail" = "La conexión de red falló.";
+"ApiErrorMessage.invalidUrl" = "URL invalida.";
+
+//MARK: - DataFail
+"DataFail.empty" = "No se devolvieron datos.";
+"DataFail.parse" = "Error al analizar los datos.";
+
+//MARK: - SimulatorMessage
+"SimulatorMessage.callTel" = "El emulador no admite llamadas telefónicas.";
+
+//MARK: - Page
+//MARK: Title
+"Page.Title.home" = "Viajes Taipéi";
+"Page.Title.newsWeb" = "últimas noticias";
+
+"Page.Home.attraction" = "Atracciones recreativas";
+"Page.Home.latestNews" = "últimas noticias";

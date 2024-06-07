@@ -14,7 +14,7 @@ struct HomePageInfo {
         var title: String {
             switch self {
             case .attraction: return CommonName.Page.Home.attraction.string
-            case .news: return CommonName.Page.Home.news.string
+            case .news: return CommonName.Page.Home.latestNews.string
             }
         }
     }

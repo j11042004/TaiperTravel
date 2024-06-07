@@ -1,0 +1,27 @@
+//MARK: - AlertInfo
+"AlertInfo.complete" = "마치다";
+"AlertInfo.message" = "정보";
+"AlertInfo.sure" = "확신하는";
+"AlertInfo.cancel" = "취소";
+"AlertInfo.confirm" = "확인하다";
+
+//MARK: - ApiErrorMessage
+"ApiErrorMessage.other" = "서버에 연결할 수 없습니다.";
+"ApiErrorMessage.timedOut" = "연결 시간이 초과되었습니다.";
+"ApiErrorMessage.internetFail" = "네트워크 연결에 실패했습니다.";
+"ApiErrorMessage.invalidUrl" = "잘못된 URL.";
+
+//MARK: - DataFail
+"DataFail.empty" = "반환된 데이터가 없습니다.";
+"DataFail.parse" = "데이터 구문 분석에 실패했습니다.";
+
+//MARK: - SimulatorMessage
+"SimulatorMessage.callTel" = "에뮬레이터는 전화 통화를 지원하지 않습니다.";
+
+//MARK: - Page
+//MARK: Title
+"Page.Title.home" = "타이페이 여행";
+"Page.Title.newsWeb" = "최근 뉴스";
+
+"Page.Home.attraction" = "레크리에이션 명소";
+"Page.Home.latestNews" = "최근 뉴스";

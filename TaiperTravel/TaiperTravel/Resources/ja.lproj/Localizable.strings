@@ -1,0 +1,27 @@
+//MARK: - AlertInfo
+"AlertInfo.complete" = "仕上げる";
+"AlertInfo.message" = "情報";
+"AlertInfo.sure" = "もちろん";
+"AlertInfo.cancel" = "キャンセル";
+"AlertInfo.confirm" = "確認する";
+
+//MARK: - ApiErrorMessage
+"ApiErrorMessage.other" = "サーバーに接続できません。";
+"ApiErrorMessage.timedOut" = "接続がタイムアウトしました。";
+"ApiErrorMessage.internetFail" = "ネットワーク接続に失敗しました。";
+"ApiErrorMessage.invalidUrl" = "無効なURL。";
+
+//MARK: - DataFail
+"DataFail.empty" = "データは返されませんでした。";
+"DataFail.parse" = "データの解析に失敗しました。";
+
+//MARK: - SimulatorMessage
+"SimulatorMessage.callTel" = "エミュレータは電話通話をサポートしていません。";
+
+//MARK: - Page
+//MARK: Title
+"Page.Title.home" = "トラベル台北";
+"Page.Title.newsWeb" = "最新ニュース";
+
+"Page.Home.attraction" = "レクリエーションアトラクション";
+"Page.Home.latestNews" = "最新ニュース";

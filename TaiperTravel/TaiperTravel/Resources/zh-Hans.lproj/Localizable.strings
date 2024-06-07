@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  TaiperTravel
+
+  Created by 周佳緯 on 2024/6/6.
+  
+*/
+//MARK: - AlertInfo
+"AlertInfo.complete" = "完成";
+"AlertInfo.message" = "信息";
+"AlertInfo.sure" = "确定";
+"AlertInfo.cancel" = "取消";
+"AlertInfo.confirm" = "确认";
+
+//MARK: - ApiErrorMessage
+"ApiErrorMessage.other" = "无法连接伺服器。";
+"ApiErrorMessage.timedOut" = "连线逾时。";
+"ApiErrorMessage.internetFail" = "网路连线失败。";
+"ApiErrorMessage.invalidUrl" = "无效网址。";
+
+//MARK: - DataFail
+"DataFail.empty" = "无回传资料。";
+"DataFail.parse" = "资料解析失败。";
+
+//MARK: - SimulatorMessage
+"SimulatorMessage.callTel" = "模拟器不支援打电话。";
+
+//MARK: - Page
+//MARK: Title
+"Page.Title.home" = "悠游台北";
+"Page.Title.newsWeb" = "最新消息";
+
+"Page.Home.attraction" = "游憩景点";
+"Page.Home.latestNews" = "最新消息";

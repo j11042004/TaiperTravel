@@ -7,68 +7,95 @@
 
 import Foundation
 import UIKit
+
+protocol CommonNameProtocol { }
+extension CommonNameProtocol {
+    static var strucName: String { String(describing: Self.self) }
+}
+
 struct CommonName {
-    enum AlertInfo: String {
-        case complete = "完成"
-        case message = "訊息"
-        case sure = "確定"
-        case cancel = "取消"
-        case confirm = "確認"
+    enum AlertInfo: CommonNameProtocol {
+        /// 完成
+        case complete
+        /// 訊息
+        case message
+        /// 確定
+        case sure
+        /// 取消
+        case cancel
+        /// 確認
+        case confirm
         
         var string: String {
-            return self.rawValue
+            let localKey = [AlertInfo.strucName, "\(self)"].joined(separator: ".")
+            return localKey.localized
         }
     }
 }
 
 extension CommonName {
-    enum ApiErrorMessage: String {
-        case other = "無法連接伺服器。"
-        case timedOut = "連線逾時。"
-        case internetFail = "網路連線失敗。"
-        case invalidUrl = "無效網址。"
+    enum ApiErrorMessage: CommonNameProtocol {
+        /// 無法連接伺服器。
+        case other
+        /// 連線逾時。
+        case timedOut
+        /// 網路連線失敗。
+        case internetFail
+        /// 無效網址。
+        case invalidUrl
         
         var string: String {
-            return self.rawValue
+            let localKey = [ApiErrorMessage.strucName, "\(self)"].joined(separator: ".")
+            return localKey.localized
         }
     }
-    enum DataFail: String {
-        case empty = "無回傳資料。"
-        case parse = "資料解析失敗。"
+    enum DataFail: CommonNameProtocol {
+        /// 無回傳資料。
+        case empty
+        /// 資料解析失敗。
+        case parse
         
         var string: String {
-            return self.rawValue
+            let localKey = [DataFail.strucName, "\(self)"].joined(separator: ".")
+            return localKey.localized
         }
     }
-    enum SimulatorMessage: String {
-        case callTel = "模擬器不支援打電話。"
+    enum SimulatorMessage: CommonNameProtocol {
+        /// 模擬器不支援打電話。
+        case callTel
         
         var string: String {
-            return self.rawValue
+            let localKey = [SimulatorMessage.strucName, "\(self)"].joined(separator: ".")
+            return localKey.localized
         }
     }
 }
 
 //MARK: - Page
 extension CommonName {
-    struct Page {
-        enum Title: String {
-            case home = "悠遊台北"
-            case newsWeb = "最新消息"
+    struct Page: CommonNameProtocol {
+        enum Title: CommonNameProtocol {
+            /// 悠遊台北
+            case home
+            /// 最新消息
+            case newsWeb
             
             var string: String {
-                return self.rawValue
+                let localKey = [Page.strucName, Page.Title.strucName, "\(self)"].joined(separator: ".")
+                return localKey.localized
             }
         }
         
-        enum Home: String {
-            case attraction = "遊憩景點"
-            case news = "最新消息"
+        enum Home: CommonNameProtocol {
+            /// 遊憩景點
+            case attraction
+            /// 最新消息
+            case latestNews
             
             var string: String {
-                return self.rawValue
+                let localKey = [Page.strucName,Page.Home.strucName, "\(self)"].joined(separator: ".")
+                return localKey.localized
             }
         }
     }
-    
 }

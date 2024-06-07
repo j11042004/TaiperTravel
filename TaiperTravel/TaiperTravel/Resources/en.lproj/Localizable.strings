@@ -1,0 +1,27 @@
+//MARK: - AlertInfo
+"AlertInfo.complete" = "Complete";
+"AlertInfo.message" = "Message";
+"AlertInfo.sure" = "Sure";
+"AlertInfo.cancel" = "Cancel";
+"AlertInfo.confirm" = "Confirm";
+
+//MARK: - ApiErrorMessage
+"ApiErrorMessage.other" = "Unable to connect to server.";
+"ApiErrorMessage.timedOut" = "The connection timed out.";
+"ApiErrorMessage.internetFail" = "Network connection failed.";
+"ApiErrorMessage.invalidUrl" = "Invalid URL.";
+
+//MARK: - DataFail
+"DataFail.empty" = "No data returned.";
+"DataFail.parse" = "Data parsing failed.";
+
+//MARK: - SimulatorMessage
+"SimulatorMessage.callTel" = "The emulator does not support phone calls.";
+
+//MARK: - Page
+//MARK: Title
+"Page.Title.home" = "Travel in Taipei";
+"Page.Title.newsWeb" = "Latest news";
+
+"Page.Home.attraction" = "Recreational attractions";
+"Page.Home.latestNews" = "Latest news";

@@ -1,0 +1,27 @@
+//MARK: - AlertInfo
+"AlertInfo.complete" = "เสร็จ";
+"AlertInfo.message" = "ข้อมูล";
+"AlertInfo.sure" = "แน่นอน";
+"AlertInfo.cancel" = "ยกเลิก";
+"AlertInfo.confirm" = "ยืนยัน";
+
+//MARK: - ApiErrorMessage
+"ApiErrorMessage.other" = "ไม่สามารถเชื่อมต่อกับระบบได้.";
+"ApiErrorMessage.timedOut" = "การเชื่อมต่อหมดเวลา";
+"ApiErrorMessage.internetFail" = "การเชื่อมต่อเครือข่ายล้มเหลว";
+"ApiErrorMessage.invalidUrl" = "URL ไม่ถูกต้อง.";
+
+//MARK: - DataFail
+"DataFail.empty" = "ไม่มีข้อมูลส่งคืน";
+"DataFail.parse" = "การแยกวิเคราะห์ข้อมูลล้มเหลว";
+
+//MARK: - SimulatorMessage
+"SimulatorMessage.callTel" = "โปรแกรมจำลองไม่รองรับการโทร";
+
+//MARK: - Page
+//MARK: Title
+"Page.Title.home" = "เที่ยวไทเป";
+"Page.Title.newsWeb" = "ข่าวล่าสุด";
+
+"Page.Home.attraction" = "สถานที่ท่องเที่ยวเชิงสันทนาการ";
+"Page.Home.latestNews" = "ข่าวล่าสุด";

@@ -13,25 +13,58 @@ enum ApiError: Error {
     case resultFail(_ code: String?, _ message: String?, _ data: Data? = nil)
 }
 
-enum Language: String {
+enum Language: CaseIterable {
     /// 正體中文
-    case zhTW = "zh-tw"
+    case taiwan
     /// 簡體中文
-    case zhCN = "zh-cn"
+    case china
     /// 英文
-    case en = "en"
+    case english
     /// 日文
-    case ja = "ja"
+    case japan
     /// 韓文
-    case ko = "ko"
+    case korean
     /// 西班牙文
-    case es = "es"
+    case es
     /// 印尼文
-    case id = "id"
+    case indonesian
     /// 泰文
-    case th = "th"
+    case thi
     /// 越南文
-    case vi = "vi"
+    case vietnamese
+    
+    var apiCode: String {
+        switch self {
+        case .taiwan: return "zh-tw"
+        case .china: return "zh-cn"
+        case .english: return "en"
+        case .japan: return "ja"
+        case .korean: return "ko"
+        case .es: return "es"
+        case .indonesian: return "id"
+        case .thi: return "th"
+        case .vietnamese: return "vi"
+        }
+    }
+    
+    var lprojId: String {
+        switch self {
+        case .taiwan: return "zh-Hant"
+        case .china: return "zh-Hans"
+        case .english: return "en"
+        case .japan: return "ja"
+        case .korean: return "ko"
+        case .es: return "es"
+        case .indonesian: return "id"
+        case .thi: return "th"
+        case .vietnamese: return "vi"
+        }
+    }
+    
+    //MARK: - Init
+    init(lprojId: String?) {
+        self = Language.allCases.first(where: { $0.lprojId == lprojId }) ?? .taiwan
+    }
 }
 
 enum CustomColor: String {

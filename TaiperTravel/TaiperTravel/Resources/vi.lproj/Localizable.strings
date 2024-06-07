@@ -1,0 +1,27 @@
+//MARK: - AlertInfo
+"AlertInfo.complete" = "Hoàn thành";
+"AlertInfo.message" = "thông tin";
+"AlertInfo.sure" = "Chắc chắn";
+"AlertInfo.cancel" = "Hủy bỏ";
+"AlertInfo.confirm" = "xác nhận";
+
+//MARK: - ApiErrorMessage
+"ApiErrorMessage.other" = "Không thể kết nối đến máy chủ.";
+"ApiErrorMessage.timedOut" = "Kết nối đã hết thời gian chờ.";
+"ApiErrorMessage.internetFail" = "Kết nối mạng không thành công.";
+"ApiErrorMessage.invalidUrl" = "URL không hợp lệ.";
+
+//MARK: - DataFail
+"DataFail.empty" = "Không có dữ liệu được trả lại.";
+"DataFail.parse" = "Phân tích dữ liệu không thành công.";
+
+//MARK: - SimulatorMessage
+"SimulatorMessage.callTel" = "Trình mô phỏng không hỗ trợ các cuộc gọi điện thoại.";
+
+//MARK: - Page
+//MARK: Title
+"Page.Title.home" = "Du lịch Đài Bắc";
+"Page.Title.newsWeb" = "tin mới nhất";
+
+"Page.Home.attraction" = "Các điểm vui chơi giải trí";
+"Page.Home.latestNews" = "tin mới nhất";

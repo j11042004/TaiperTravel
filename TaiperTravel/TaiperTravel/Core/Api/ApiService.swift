@@ -16,9 +16,7 @@ enum ApiService {
 }
 
 extension ApiService {
-    public var language: String {
-        return Language.zhTW.rawValue
-    }
+    public var language: String { localLanguage }
     public var urlPath: String {
         switch self {
         case .Attractions:

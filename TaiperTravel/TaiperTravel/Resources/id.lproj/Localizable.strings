@@ -1,0 +1,27 @@
+//MARK: - AlertInfo
+"AlertInfo.complete" = "Menyelesaikan";
+"AlertInfo.message" = "informasi";
+"AlertInfo.sure" = "Tentu";
+"AlertInfo.cancel" = "Membatalkan";
+"AlertInfo.confirm" = "mengonfirmasi";
+
+//MARK: - ApiErrorMessage
+"ApiErrorMessage.other" = "Tidak dapat terhubung ke server.";
+"ApiErrorMessage.timedOut" = "Waktu koneksi habis.";
+"ApiErrorMessage.internetFail" = "Koneksi jaringan gagal.";
+"ApiErrorMessage.invalidUrl" = "URL tidak valid.";
+
+//MARK: - DataFail
+"DataFail.empty" = "Tidak ada data yang dikembalikan.";
+"DataFail.parse" = "Penguraian data gagal.";
+
+//MARK: - SimulatorMessage
+"SimulatorMessage.callTel" = "Emulator tidak mendukung panggilan telepon.";
+
+//MARK: - Page
+//MARK: Title
+"Page.Title.home" = "Perjalanan Taipei";
+"Page.Title.newsWeb" = "berita terbaru";
+
+"Page.Home.attraction" = "Atraksi rekreasi";
+"Page.Home.latestNews" = "berita terbaru";
