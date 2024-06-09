@@ -70,10 +70,6 @@ enum Language: CaseIterable, CommonNameProtocol {
     init(name: String) {
         self = Language.allCases.first(where: { $0.name == name }) ?? .taiwan
     }
-    
-    init(preferredLocalization: String? = Bundle.main.preferredLocalizations.first) {
-        self.init(lprojId: preferredLocalization)
-    }
 }
 
 enum CustomColor: String {
@@ -84,4 +80,9 @@ enum CustomColor: String {
     case backgroundColor = "BackgroundColor"
     
     var color: UIColor? { .init(named: self.rawValue) }
+}
+
+enum UserDefaultKey: String {
+    case oldPreferredLanguage
+    case userSetLanguage
 }
