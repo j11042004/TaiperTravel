@@ -30,6 +30,11 @@
 "Page.Home.attraction" = "Các điểm vui chơi giải trí";
 "Page.Home.latestNews" = "tin mới nhất";
 
+"Page.AttractionDetail.openTime" = "Giờ kinh doanh";
+"Page.AttractionDetail.address" = "Địa chỉ";
+"Page.AttractionDetail.tel" = "Số liên lạc";
+"Page.AttractionDetail.website" = "URL";
+
 //MARK: - Language
 "Language.taiwan" = "truyền thống Trung Quốc";
 "Language.china" = "Tiếng Trung giản thể";

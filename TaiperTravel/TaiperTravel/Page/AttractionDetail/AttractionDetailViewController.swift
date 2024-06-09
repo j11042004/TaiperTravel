@@ -14,14 +14,18 @@ class AttractionDetailViewController: BaseViewController {
     @IBOutlet private weak var imageCollectView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    @IBOutlet private weak var openTimeTitleLabel: UILabel!
     @IBOutlet private weak var openTimeLabel: UILabel!
     
+    @IBOutlet private weak var addressTitleLabel: UILabel!
     @IBOutlet private weak var addressLabel: UILabel!
     @IBOutlet private weak var addressBtn: UIButton!
     
+    @IBOutlet private weak var telTitleLabel: UILabel!
     @IBOutlet private weak var telLabel: UILabel!
     @IBOutlet private weak var telBtn: UIButton!
     
+    @IBOutlet private weak var webUrlTitleLabel: UILabel!
     @IBOutlet private weak var webUrlLabel: UILabel!
     @IBOutlet private weak var webUrlBtn: UIButton!
     
@@ -98,26 +102,50 @@ extension AttractionDetailViewController {
             }
             .store(in: &cancellableSet)
         
+        self.viewModel.$openTimeTitle
+            .compactMap({ $0 as String? })
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.text, on: openTimeTitleLabel)
+            .store(in: &cancellableSet)
         self.viewModel.$openTime
             .compactMap({ $0 as String? })
             .receive(on: DispatchQueue.main)
             .assign(to: \.text, on: openTimeLabel)
+            .store(in: &cancellableSet)
+        
+        self.viewModel.$addressTitle
+            .compactMap({ $0 as String? })
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.text, on: addressTitleLabel)
             .store(in: &cancellableSet)
         self.viewModel.$address
             .compactMap({ $0 as String? })
             .receive(on: DispatchQueue.main)
             .assign(to: \.text, on: addressLabel)
             .store(in: &cancellableSet)
+        
+        self.viewModel.$telTitle
+            .compactMap({ $0 as String? })
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.text, on: telTitleLabel)
+            .store(in: &cancellableSet)
         self.viewModel.$tel
             .compactMap({ $0 as String? })
             .receive(on: DispatchQueue.main)
             .assign(to: \.text, on: telLabel)
+            .store(in: &cancellableSet)
+        
+        self.viewModel.$webUrlTitle
+            .compactMap({ $0 as String? })
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.text, on: webUrlTitleLabel)
             .store(in: &cancellableSet)
         self.viewModel.$webUrl
             .compactMap({ $0 as String? })
             .receive(on: DispatchQueue.main)
             .assign(to: \.text, on: webUrlLabel)
             .store(in: &cancellableSet)
+        
         self.viewModel.$introduction
             .compactMap({ $0 as String? })
             .receive(on: DispatchQueue.main)

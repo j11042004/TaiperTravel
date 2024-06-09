@@ -37,6 +37,11 @@
 "Page.Home.attraction" = "游憩景点";
 "Page.Home.latestNews" = "最新消息";
 
+"Page.AttractionDetail.openTime" = "营业时间";
+"Page.AttractionDetail.address" = "地址";
+"Page.AttractionDetail.tel" = "联络电话";
+"Page.AttractionDetail.website" = "网址";
+
 //MARK: - Language
 "Language.taiwan" = "繁体中文";
 "Language.china" = "简体中文";

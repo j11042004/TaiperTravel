@@ -30,6 +30,11 @@
 "Page.Home.attraction" = "Recreational attractions";
 "Page.Home.latestNews" = "Latest news";
 
+"Page.AttractionDetail.openTime" = "Business hours";
+"Page.AttractionDetail.address" = "Address";
+"Page.AttractionDetail.tel" = "Tel";
+"Page.AttractionDetail.website" = "URL";
+
 //MARK: - Language
 "Language.taiwan" = "Traditional Chinese";
 "Language.china" = "Simplified Chinese";

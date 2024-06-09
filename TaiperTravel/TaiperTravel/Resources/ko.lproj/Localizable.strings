@@ -30,6 +30,11 @@
 "Page.Home.attraction" = "레크리에이션 명소";
 "Page.Home.latestNews" = "최근 뉴스";
 
+"Page.AttractionDetail.openTime" = "업무 시간";
+"Page.AttractionDetail.address" = "주소";
+"Page.AttractionDetail.tel" = "연락처";
+"Page.AttractionDetail.website" = "URL";
+
 //MARK: - Language
 "Language.taiwan" = "중국어 번체";
 "Language.china" = "중국어 간체";

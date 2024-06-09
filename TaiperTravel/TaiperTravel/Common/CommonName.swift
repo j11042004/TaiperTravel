@@ -105,7 +105,19 @@ extension CommonName {
             case latestNews
             
             var string: String {
-                let localKey = [Page.className,Page.Home.className, "\(self)"].joined(separator: ".")
+                let localKey = [Page.className, Page.Home.className, "\(self)"].joined(separator: ".")
+                return localKey.localized(language: Constant.shared.langage.lprojId)
+            }
+        }
+        
+        enum AttractionDetail: CommonNameProtocol, CaseIterable {
+            case openTime
+            case address
+            case tel
+            case website
+            
+            var string: String {
+                let localKey = [Page.className, Page.AttractionDetail.className, "\(self)"].joined(separator: ".")
                 return localKey.localized(language: Constant.shared.langage.lprojId)
             }
         }

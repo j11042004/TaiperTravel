@@ -13,10 +13,18 @@ import UIKit
 class AttractionDetailViewModel: BaseViewModel {
     private var attractionInfo: HomeAttraction
     
+    @Published var openTimeTitle: String = ""
     @Published var openTime: String = ""
+    
+    @Published var addressTitle: String = ""
     @Published var address: String = ""
+    
+    @Published var telTitle: String = ""
     @Published var tel: String = ""
+    
+    @Published var webUrlTitle: String = ""
     @Published var webUrl: String = ""
+    
     @Published var introduction: String = ""
     @Published var images: [UIImage] = .init()
     
@@ -26,6 +34,16 @@ class AttractionDetailViewModel: BaseViewModel {
         self.attractionInfo = attractionInfo
         super.init()
         self.pageTitle = attractionInfo.name
+        
+        CommonName.Page.AttractionDetail.allCases.forEach {
+            switch $0 {
+            case .openTime: self.openTimeTitle = "\($0.string): "
+            case .address: self.addressTitle = "\($0.string): "
+            case .tel: self.telTitle = "\($0.string): "
+            case .website: self.webUrlTitle = "\($0.string): "
+            }
+        }
+        
         
         self.openTime = attractionInfo.openTime
         self.address = attractionInfo.address

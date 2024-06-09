@@ -14,15 +14,19 @@
             <connections>
                 <outlet property="addressBtn" destination="OyH-Zc-Wpq" id="42q-M5-Rwb"/>
                 <outlet property="addressLabel" destination="o3y-H9-7f1" id="g83-Jt-KiC"/>
+                <outlet property="addressTitleLabel" destination="sof-IT-8aa" id="7qO-ry-stF"/>
                 <outlet property="imageCollectView" destination="L0B-jc-lQb" id="iJv-50-Q46"/>
                 <outlet property="introductionLabel" destination="FPg-E4-mWs" id="mwK-uY-zXT"/>
                 <outlet property="openTimeLabel" destination="EvA-Mm-na9" id="p3h-Qr-ANt"/>
+                <outlet property="openTimeTitleLabel" destination="uQh-Nb-ktx" id="kw1-mB-fMl"/>
                 <outlet property="pageControl" destination="Je2-Ac-aQh" id="ccT-15-T2E"/>
                 <outlet property="telBtn" destination="naH-k1-eQ9" id="Bq9-Eb-U9M"/>
                 <outlet property="telLabel" destination="dnr-Na-DON" id="DsI-M2-e5j"/>
+                <outlet property="telTitleLabel" destination="DPb-Wf-Cq6" id="Va0-Lc-qus"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="webUrlBtn" destination="GdF-X6-ARX" id="562-w5-6cG"/>
                 <outlet property="webUrlLabel" destination="aXh-Bn-19R" id="yuA-v6-Shf"/>
+                <outlet property="webUrlTitleLabel" destination="8fs-Je-9JB" id="adx-LF-1Js"/>
                 <outletCollection property="contentViews" destination="u7i-Bf-F4W" collectionClass="NSMutableArray" id="BbW-of-wGY"/>
                 <outletCollection property="contentViews" destination="Dlx-zp-KHj" collectionClass="NSMutableArray" id="uGc-aC-h9T"/>
                 <outletCollection property="contentViews" destination="ww0-0w-rHf" collectionClass="NSMutableArray" id="VNc-4r-7fw"/>
@@ -86,6 +90,15 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7i-Bf-F4W">
                                     <rect key="frame" x="0.0" y="0.0" width="373" height="62"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="營業時間: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQh-Nb-ktx">
+                                            <rect key="frame" x="15" y="20" width="80" height="20.333333333333329"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="0le-S2-o2u"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvA-Mm-na9">
                                             <rect key="frame" x="97" y="20" width="43.333333333333343" height="22"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,18 +109,10 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="營業時間: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQh-Nb-ktx">
-                                            <rect key="frame" x="15" y="20" width="80" height="20.333333333333329"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="0le-S2-o2u"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" name="BackgroundColor"/>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uQh-Nb-ktx" secondAttribute="bottom" constant="20" id="2GO-fm-Dym"/>
                                         <constraint firstAttribute="bottom" secondItem="EvA-Mm-na9" secondAttribute="bottom" constant="20" id="Pfu-N3-TNo"/>
                                         <constraint firstItem="EvA-Mm-na9" firstAttribute="leading" secondItem="uQh-Nb-ktx" secondAttribute="trailing" constant="2" id="Swo-fS-Oaq"/>
                                         <constraint firstItem="uQh-Nb-ktx" firstAttribute="top" secondItem="u7i-Bf-F4W" secondAttribute="top" constant="20" id="eKb-n4-JSR"/>
@@ -119,6 +124,15 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dlx-zp-KHj">
                                     <rect key="frame" x="0.0" y="72" width="373" height="62"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sof-IT-8aa">
+                                            <rect key="frame" x="15" y="20" width="45" height="20.333333333333329"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="SnB-6S-OuI"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" name="BlueTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3y-H9-7f1">
                                             <rect key="frame" x="62" y="20" width="43.333333333333343" height="22"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -126,15 +140,6 @@
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="lkM-ml-8aW"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                            <color key="textColor" name="BlueTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sof-IT-8aa">
-                                            <rect key="frame" x="15" y="20" width="45" height="20.333333333333329"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="ggU-hk-gKZ"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" name="BlueTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -164,22 +169,22 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ww0-0w-rHf">
                                     <rect key="frame" x="0.0" y="144" width="373" height="62"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="聯絡電話: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPb-Wf-Cq6">
+                                            <rect key="frame" x="15" y="20" width="79" height="20.333333333333329"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="Q6E-iC-XAs"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" name="BlueTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnr-Na-DON">
-                                            <rect key="frame" x="97" y="20" width="43.333333333333343" height="22"/>
+                                            <rect key="frame" x="96" y="20" width="43.333333333333343" height="22"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="6gQ-9B-gnJ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                            <color key="textColor" name="BlueTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="聯絡電話: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPb-Wf-Cq6">
-                                            <rect key="frame" x="15" y="20" width="80" height="20.333333333333329"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="7V6-PX-3Jt"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" name="BlueTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -209,6 +214,15 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swv-rh-NKN">
                                     <rect key="frame" x="0.0" y="216" width="373" height="62"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="網址: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fs-Je-9JB">
+                                            <rect key="frame" x="15" y="20" width="45" height="20.333333333333329"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="62c-bM-fB5"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" name="BlueTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXh-Bn-19R">
                                             <rect key="frame" x="62" y="20" width="43.333333333333343" height="22"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -216,15 +230,6 @@
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="pDK-8Y-7BD"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                            <color key="textColor" name="BlueTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="網址: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fs-Je-9JB">
-                                            <rect key="frame" x="15" y="20" width="45" height="20.333333333333329"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="62c-bM-fB5"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" name="BlueTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -312,7 +317,7 @@
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BlueTextColor">
-            <color red="0.4563964009" green="0.58419239519999999" blue="0.76448696849999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.45600000023841858" green="0.58399999141693115" blue="0.76399999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GrayTextColor">
             <color red="0.5690000057220459" green="0.5690000057220459" blue="0.5690000057220459" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

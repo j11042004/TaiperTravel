@@ -30,6 +30,11 @@
 "Page.Home.attraction" = "สถานที่ท่องเที่ยวเชิงสันทนาการ";
 "Page.Home.latestNews" = "ข่าวล่าสุด";
 
+"Page.AttractionDetail.openTime" = "เวลาทำการ";
+"Page.AttractionDetail.address" = "ที่อยู่";
+"Page.AttractionDetail.tel" = "เบอร์ติดต่อ";
+"Page.AttractionDetail.website" = "URL";
+
 //MARK: - Language
 "Language.taiwan" = "จีนดั้งเดิม";
 "Language.china" = "จีนตัวย่อ";

@@ -30,6 +30,11 @@
 "Page.Home.attraction" = "Atraksi rekreasi";
 "Page.Home.latestNews" = "berita terbaru";
 
+"Page.AttractionDetail.openTime" = "Jam kerja";
+"Page.AttractionDetail.address" = "Alamat";
+"Page.AttractionDetail.tel" = "Nomor kontak";
+"Page.AttractionDetail.website" = "URL";
+
 //MARK: - Language
 "Language.taiwan" = "Cina tradisional";
 "Language.china" = "Cina disederhanakan";

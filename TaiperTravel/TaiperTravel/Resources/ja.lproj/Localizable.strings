@@ -30,6 +30,11 @@
 "Page.Home.attraction" = "レクリエーションアトラクション";
 "Page.Home.latestNews" = "最新ニュース";
 
+"Page.AttractionDetail.openTime" = "営業時間";
+"Page.AttractionDetail.address" = "住所";
+"Page.AttractionDetail.tel" = "連絡先番号";
+"Page.AttractionDetail.website" = "URL";
+
 //MARK: - Language
 "Language.taiwan" = "繁体字中国語";
 "Language.china" = "簡体字中国語";
