@@ -33,7 +33,7 @@ enum Language: CaseIterable, CommonNameProtocol {
     /// 越南文
     case vietnamese
     
-    var name: String { [Language.className, "\(self)"].joined(separator: ".").localized }
+    var name: String { [Language.className, "\(self)"].joined(separator: ".").localized(language: Constant.shared.langage.lprojId) }
     
     var apiCode: String {
         switch self {
@@ -69,6 +69,10 @@ enum Language: CaseIterable, CommonNameProtocol {
     }
     init(name: String) {
         self = Language.allCases.first(where: { $0.name == name }) ?? .taiwan
+    }
+    
+    init(preferredLocalization: String? = Bundle.main.preferredLocalizations.first) {
+        self.init(lprojId: preferredLocalization)
     }
 }
 

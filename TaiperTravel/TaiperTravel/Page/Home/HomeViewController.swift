@@ -15,6 +15,11 @@ class HomeViewController: BaseViewController {
         btn.setImage(CommonImage.UserInterface.showDark.image, for: .normal)
         return btn
     }()
+    private lazy var changeLanguageItemBtn: UIButton = {
+        let btn = UIButton(type: .custom)
+        btn.setImage(CommonImage.ChangeLanguage.global.image, for: .normal)
+        return btn
+    }()
     
     private var viewModel: HomeViewModel!
     
@@ -77,6 +82,30 @@ extension HomeViewController {
             }
             .store(in: &cancellableSet)
         
+        self.viewModel.$showLanguageSelections
+            .filter({ !$0.isEmpty })
+            .receive(on: DispatchQueue.main)
+            .withUnretained(self)
+            .sink(receiveValue: { (weakSelf, languages) in
+                var actions = languages.compactMap({
+                    UIAlertAction(title: "\($0.name)", style: .default) { [weak self] action in
+                        guard let self = self else { return }
+                        self.viewModel.vcSelect(newLanguage: action.title ?? "")
+                    }
+                })
+                
+                let cancel = UIAlertAction(title: CommonName.AlertInfo.cancel.string, style: .cancel)
+                actions.append(cancel)
+                
+                let title = CommonName.AlertInfo.message.string
+                let message = CommonName.AlertMessage.selectLanguage.string
+                let alert = Tools.alertWith(title: title,
+                                            message: message,
+                                            actions: actions)
+                weakSelf.present(alert, animated: true)
+            })
+            .store(in: &cancellableSet)
+        
         Publishers.CombineLatest(viewModel.reloadAttractionSubject, viewModel.reloadNewsSubject)
             .receive(on: DispatchQueue.main)
             .withUnretained(self)
@@ -95,6 +124,13 @@ extension HomeViewController {
                 self.resetUserInterfaceStyle()
             }
         }
+        
+        changeLanguageItemBtn.publisher(for: .touchUpInside)
+            .withUnretained(self)
+            .sink { (weakSelf, _) in
+                weakSelf.viewModel.vcChangeLanguage()
+            }
+            .store(in: &cancellableSet)
         
         changeInterfaceStyleItemBtn.publisher(for: .touchUpInside)
             .withUnretained(self)
@@ -131,8 +167,7 @@ extension HomeViewController {
         tableView.register(.init(nibName: newsCellName, bundle: nil), forCellReuseIdentifier: newsCellName)
     }
     private func setupBarItem() {
-        let changeInterfaceBarItem = UIBarButtonItem(customView: changeInterfaceStyleItemBtn)
-        self.navigationItem.rightBarButtonItems = [changeInterfaceBarItem]
+        self.navigationItem.rightBarButtonItems = [changeLanguageItemBtn, changeInterfaceStyleItemBtn].compactMap({ UIBarButtonItem(customView: $0) })
     }
     
     private func resetUserInterfaceStyle() {

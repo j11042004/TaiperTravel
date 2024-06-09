@@ -25,10 +25,22 @@ struct CommonName {
         case cancel
         /// 確認
         case confirm
+        /// 選擇顯示語言
+        case selectLanguage
         
         var string: String {
             let localKey = [AlertInfo.className, "\(self)"].joined(separator: ".")
-            return localKey.localized
+            return localKey.localized(language: Constant.shared.langage.lprojId)
+        }
+    }
+    
+    enum AlertMessage: CommonNameProtocol {
+        /// 選擇顯示語言
+        case selectLanguage
+        
+        var string: String {
+            let localKey = [AlertMessage.className, "\(self)"].joined(separator: ".")
+            return localKey.localized(language: Constant.shared.langage.lprojId)
         }
     }
 }
@@ -46,7 +58,7 @@ extension CommonName {
         
         var string: String {
             let localKey = [ApiErrorMessage.className, "\(self)"].joined(separator: ".")
-            return localKey.localized
+            return localKey.localized(language: Constant.shared.langage.lprojId)
         }
     }
     enum DataFail: CommonNameProtocol {
@@ -57,7 +69,7 @@ extension CommonName {
         
         var string: String {
             let localKey = [DataFail.className, "\(self)"].joined(separator: ".")
-            return localKey.localized
+            return localKey.localized(language: Constant.shared.langage.lprojId)
         }
     }
     enum SimulatorMessage: CommonNameProtocol {
@@ -66,7 +78,7 @@ extension CommonName {
         
         var string: String {
             let localKey = [SimulatorMessage.className, "\(self)"].joined(separator: ".")
-            return localKey.localized
+            return localKey.localized(language: Constant.shared.langage.lprojId)
         }
     }
 }
@@ -82,7 +94,7 @@ extension CommonName {
             
             var string: String {
                 let localKey = [Page.className, Page.Title.className, "\(self)"].joined(separator: ".")
-                return localKey.localized
+                return localKey.localized(language: Constant.shared.langage.lprojId)
             }
         }
         
@@ -94,7 +106,7 @@ extension CommonName {
             
             var string: String {
                 let localKey = [Page.className,Page.Home.className, "\(self)"].joined(separator: ".")
-                return localKey.localized
+                return localKey.localized(language: Constant.shared.langage.lprojId)
             }
         }
     }

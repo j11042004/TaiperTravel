@@ -1,9 +1,13 @@
-//MARK: - AlertInfo
+//MARK: - Alert
+//MARK: Info
 "AlertInfo.complete" = "마치다";
 "AlertInfo.message" = "정보";
 "AlertInfo.sure" = "확신하는";
 "AlertInfo.cancel" = "취소";
 "AlertInfo.confirm" = "확인하다";
+
+//MARK: Message
+"AlertMessage.selectLanguage" = "표시 언어를 선택하세요.";
 
 //MARK: - ApiErrorMessage
 "ApiErrorMessage.other" = "서버에 연결할 수 없습니다.";

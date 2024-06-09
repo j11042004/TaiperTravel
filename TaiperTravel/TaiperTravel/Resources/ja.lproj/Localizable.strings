@@ -1,9 +1,13 @@
-//MARK: - AlertInfo
+//MARK: - Alert
+//MARK: Info
 "AlertInfo.complete" = "仕上げる";
 "AlertInfo.message" = "情報";
 "AlertInfo.sure" = "もちろん";
 "AlertInfo.cancel" = "キャンセル";
 "AlertInfo.confirm" = "確認する";
+
+//MARK: Message
+"AlertMessage.selectLanguage" = "表示言語を選択してください。";
 
 //MARK: - ApiErrorMessage
 "ApiErrorMessage.other" = "サーバーに接続できません。";

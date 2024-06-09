@@ -62,6 +62,7 @@
 		B07776A72C0C6D94004C1F2C /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776A62C0C6D94004C1F2C /* Array+Extension.swift */; };
 		B07776A92C0C7269004C1F2C /* HomeAttraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776A82C0C7269004C1F2C /* HomeAttraction.swift */; };
 		B07776AB2C0C727B004C1F2C /* HomeNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776AA2C0C727B004C1F2C /* HomeNews.swift */; };
+		B0CD80162C1599150069716C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CD80152C1599150069716C /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +170,7 @@
 		B0CD80102C1358C50069716C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		B0CD80112C1358C50069716C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Home.strings; sourceTree = "<group>"; };
 		B0CD80122C1358C60069716C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B0CD80152C1599150069716C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D54CC825432A526D074BFF43 /* Pods-TaiperTravelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiperTravelTests.debug.xcconfig"; path = "Target Support Files/Pods-TaiperTravelTests/Pods-TaiperTravelTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FEFFE2F58E8ED903F3023AF5 /* Pods-TaiperTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiperTravel.release.xcconfig"; path = "Target Support Files/Pods-TaiperTravel/Pods-TaiperTravel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -322,6 +324,7 @@
 		B07776582C076564004C1F2C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B0CD80152C1599150069716C /* Constant.swift */,
 				B077766E2C08AFFE004C1F2C /* Api */,
 			);
 			path = Core;
@@ -793,6 +796,7 @@
 				B07776982C0C4F82004C1F2C /* AttractionTableCell.swift in Sources */,
 				B07776932C0C4F25004C1F2C /* HomePageInfo.swift in Sources */,
 				B07776A52C0C6319004C1F2C /* View+Extension.swift in Sources */,
+				B0CD80162C1599150069716C /* Constant.swift in Sources */,
 				B02F74E92C0CA7BE00B549C7 /* CommonName.swift in Sources */,
 				B07776812C0B72F1004C1F2C /* BaseResponse.swift in Sources */,
 				B02F75072C109EE100B549C7 /* AttractionDetailImageCollectCell.swift in Sources */,

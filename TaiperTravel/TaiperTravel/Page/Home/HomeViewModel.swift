@@ -23,13 +23,15 @@ class HomeViewModel: BaseViewModel {
         }
     }
     
+    @Published private(set) var showLanguageSelections: [Language] = []
+    
     //MARK: Data
     /// 景點 Array
     private var attractionResponses: [AttractionsResponse] = []
     /// 最新消息 Array
-    private var newResponses: [EventNewsResponse] = [] {
+    private var latestNewsResponses: [EventNewsResponse] = [] {
         didSet {
-            let homeNewsArray: [HomeNews] = newResponses.compactMap({ .init($0) })
+            let homeNewsArray: [HomeNews] = latestNewsResponses.compactMap({ .init($0) })
             let newsPageInfo = HomePageInfo(type: .news, news: homeNewsArray)
             if let index = homePageInfos.firstIndex(where: { $0.type == .news }) {
                 homePageInfos[index] = newsPageInfo
@@ -50,7 +52,7 @@ class HomeViewModel: BaseViewModel {
 //MAR: - Public Func
 extension HomeViewModel {
     public func initData() {
-        self.pageTitle = CommonName.Page.Title.home.string
+        resetModelDatas()
         
         // 確定全資料 Api 有回來 再關閉 Loading
         Publishers.CombineLatest(reloadAttractionSubject, reloadNewsSubject)
@@ -74,7 +76,17 @@ extension HomeViewModel {
         UIApplication.shared.rootWindow?.overrideUserInterfaceStyle = interfaceStyle
     }
     public func vcChangeLanguage() {
+        showLanguageSelections = Language.allCases
+    }
+    public func vcSelect(newLanguage: String?) {
+        let language = Language(name: newLanguage ?? "")
+        if language == Constant.shared.langage { return }
+        Constant.shared.change(language: language)
         
+        resetModelDatas()
+        
+        apiLoadAttraction()
+        apiLoadEventNews()
     }
     
     public func vcLoadHomePageInfo(_ index: Int) -> HomePageInfo? {
@@ -150,11 +162,12 @@ extension HomeViewModel {
                 switch completion {
                 case .finished: break
                 case .failure(let apiError):
-                    self.newResponses.append(contentsOf: [])
+                    self.latestNewsResponses.append(contentsOf: [])
                     self.processApiAlert(error: apiError, showAlert: true)
                 }
             } receiveValue: { (weakSelf, apiResult) in
-                weakSelf.newResponses.append(contentsOf: apiResult.data)
+                if weakSelf.newsPageCount == 1 { weakSelf.latestNewsResponses.removeAll() }
+                weakSelf.latestNewsResponses.append(contentsOf: apiResult.data)
                 weakSelf.newsPageCount += 1
             }
             .store(in: &cancellableSet)
@@ -162,8 +175,16 @@ extension HomeViewModel {
 }
 
 extension HomeViewModel {
+    private func resetModelDatas() {
+        pageTitle = CommonName.Page.Title.home.string
+        attractionPageCount = 1
+        newsPageCount = 1
+    }
+    
     private func loadAttractionImages(_ attractions: [AttractionsResponse]) {
+        if self.attractionPageCount == 1 { self.attractionResponses.removeAll() }
         self.attractionResponses.append(contentsOf: attractions)
+        
         // 下載所有第一張照片
         let willDownloadPublishers = attractionResponses
             .compactMap({ $0.images.first?.url })

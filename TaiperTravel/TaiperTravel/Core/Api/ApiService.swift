@@ -16,13 +16,13 @@ enum ApiService {
 }
 
 extension ApiService {
-    public var language: String { localLanguage }
     public var urlPath: String {
+        let languageCode = Constant.shared.langage.apiCode
         switch self {
         case .Attractions:
-            return BaseUrl + language + "/Attractions/All"
+            return BaseUrl + languageCode + "/Attractions/All"
         case .EventNews:
-            return BaseUrl + language + "/Events/News"
+            return BaseUrl + languageCode + "/Events/News"
         }
     }
     

@@ -18,5 +18,12 @@ extension CommonImage {
             UIImage(systemName: self.rawValue)
         }
     }
+    enum ChangeLanguage: String {
+        case global = "globe"
+        
+        var image: UIImage? {
+            UIImage(systemName: self.rawValue)
+        }
+    }
 }
 

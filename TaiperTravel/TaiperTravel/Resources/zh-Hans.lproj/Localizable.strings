@@ -5,12 +5,16 @@
   Created by 周佳緯 on 2024/6/6.
   
 */
-//MARK: - AlertInfo
+//MARK: - Alert
+//MARK: Info
 "AlertInfo.complete" = "完成";
 "AlertInfo.message" = "信息";
 "AlertInfo.sure" = "确定";
 "AlertInfo.cancel" = "取消";
 "AlertInfo.confirm" = "确认";
+
+//MARK: Message
+"AlertMessage.selectLanguage" = "請選擇顯示語言。";
 
 //MARK: - ApiErrorMessage
 "ApiErrorMessage.other" = "无法连接伺服器。";

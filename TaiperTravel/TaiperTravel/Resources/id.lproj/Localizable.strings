@@ -1,9 +1,13 @@
-//MARK: - AlertInfo
+//MARK: - Alert
+//MARK: Info
 "AlertInfo.complete" = "Menyelesaikan";
 "AlertInfo.message" = "informasi";
 "AlertInfo.sure" = "Tentu";
 "AlertInfo.cancel" = "Membatalkan";
 "AlertInfo.confirm" = "mengonfirmasi";
+
+//MARK: Message
+"AlertMessage.selectLanguage" = "Silakan pilih bahasa tampilan.";
 
 //MARK: - ApiErrorMessage
 "ApiErrorMessage.other" = "Tidak dapat terhubung ke server.";

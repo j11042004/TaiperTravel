@@ -25,8 +25,3 @@ public var BaseUrl: String {
     }
     return url
 }
-
-public var localLanguage: String {
-    let nowLocalCode = Bundle.main.preferredLocalizations.first
-    return Language(lprojId: nowLocalCode).apiCode
-}

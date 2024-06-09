@@ -1,9 +1,13 @@
-//MARK: - AlertInfo
+//MARK: - Alert
+//MARK: Info
 "AlertInfo.complete" = "Finalizar";
 "AlertInfo.message" = "información";
 "AlertInfo.sure" = "Seguro";
 "AlertInfo.cancel" = "Cancelar";
 "AlertInfo.confirm" = "confirmar";
+
+//MARK: Message
+"AlertMessage.selectLanguage" = "Seleccione un idioma de visualización.";
 
 //MARK: - ApiErrorMessage
 "ApiErrorMessage.other" = "No se puede conectar al servidor.";

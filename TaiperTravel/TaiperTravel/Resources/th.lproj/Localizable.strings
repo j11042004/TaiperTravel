@@ -1,9 +1,13 @@
-//MARK: - AlertInfo
+//MARK: - Alert
+//MARK: Info
 "AlertInfo.complete" = "เสร็จ";
 "AlertInfo.message" = "ข้อมูล";
 "AlertInfo.sure" = "แน่นอน";
 "AlertInfo.cancel" = "ยกเลิก";
 "AlertInfo.confirm" = "ยืนยัน";
+
+//MARK: Message
+"AlertMessage.selectLanguage" = "โปรดเลือกภาษาที่แสดง";
 
 //MARK: - ApiErrorMessage
 "ApiErrorMessage.other" = "ไม่สามารถเชื่อมต่อกับระบบได้.";
