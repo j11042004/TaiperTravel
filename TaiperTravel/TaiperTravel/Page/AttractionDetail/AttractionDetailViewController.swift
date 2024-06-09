@@ -14,6 +14,8 @@ class AttractionDetailViewController: BaseViewController {
     @IBOutlet private weak var imageCollectView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    @IBOutlet private weak var titleLabel: UILabel!
+    
     @IBOutlet private weak var openTimeTitleLabel: UILabel!
     @IBOutlet private weak var openTimeLabel: UILabel!
     
@@ -61,7 +63,7 @@ extension AttractionDetailViewController {
         self.viewModel.$pageTitle
             .receive(on: DispatchQueue.main)
             .compactMap({ $0 as String? })
-            .assign(to: \.title, on: self)
+            .assign(to: \.text, on: titleLabel)
             .store(in: &cancellableSet)
         
         self.viewModel.showNextVC
