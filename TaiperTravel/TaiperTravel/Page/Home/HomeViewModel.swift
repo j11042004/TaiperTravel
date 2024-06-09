@@ -53,7 +53,7 @@ class HomeViewModel: BaseViewModel {
 extension HomeViewModel {
     public func initData() {
         // 確定全資料 Api 有回來 再關閉 Loading
-        Publishers.CombineLatest(reloadAttractionSubject, reloadNewsSubject)
+        Publishers.Zip(reloadAttractionSubject, reloadNewsSubject)
             .delay(for: .seconds(0.1), scheduler: DispatchQueue.main)
             .withUnretained(self)
             .sink { (weakSelf, _) in
