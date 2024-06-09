@@ -32,3 +32,14 @@
 
 "Page.Home.attraction" = "游憩景点";
 "Page.Home.latestNews" = "最新消息";
+
+//MARK: - Language
+"Language.taiwan" = "繁体中文";
+"Language.china" = "简体中文";
+"Language.english" = "英文";
+"Language.japan" = "日文";
+"Language.korean" = "朝鲜语";
+"Language.spanish" = "西班牙文";
+"Language.indonesian" = "印尼文";
+"Language.thai" = "泰文";
+"Language.vietnamese" = "越南文";

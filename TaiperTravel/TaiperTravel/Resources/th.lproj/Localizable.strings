@@ -25,3 +25,14 @@
 
 "Page.Home.attraction" = "สถานที่ท่องเที่ยวเชิงสันทนาการ";
 "Page.Home.latestNews" = "ข่าวล่าสุด";
+
+//MARK: - Language
+"Language.taiwan" = "จีนดั้งเดิม";
+"Language.china" = "จีนตัวย่อ";
+"Language.english" = "ภาษาอังกฤษ";
+"Language.japan" = "ญี่ปุ่น";
+"Language.korean" = "ภาษาเกาหลี";
+"Language.spanish" = "สเปน";
+"Language.indonesian" = "ชาวอินโดนีเซีย";
+"Language.thai" = "แบบไทย";
+"Language.vietnamese" = "ภาษาเวียดนาม";

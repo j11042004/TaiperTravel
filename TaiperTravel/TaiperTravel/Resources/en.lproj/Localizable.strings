@@ -25,3 +25,14 @@
 
 "Page.Home.attraction" = "Recreational attractions";
 "Page.Home.latestNews" = "Latest news";
+
+//MARK: - Language
+"Language.taiwan" = "Traditional Chinese";
+"Language.china" = "Simplified Chinese";
+"Language.english" = "English";
+"Language.japan" = "Japan";
+"Language.korean" = "Korean";
+"Language.spanish" = "Spanish";
+"Language.indonesian" = "Indonesian";
+"Language.thai" = "Thai";
+"Language.vietnamese" = "Vietnamese";

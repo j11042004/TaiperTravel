@@ -10,7 +10,7 @@ import UIKit
 
 protocol CommonNameProtocol { }
 extension CommonNameProtocol {
-    static var strucName: String { String(describing: Self.self) }
+    static var className: String { String(describing: Self.self) }
 }
 
 struct CommonName {
@@ -27,7 +27,7 @@ struct CommonName {
         case confirm
         
         var string: String {
-            let localKey = [AlertInfo.strucName, "\(self)"].joined(separator: ".")
+            let localKey = [AlertInfo.className, "\(self)"].joined(separator: ".")
             return localKey.localized
         }
     }
@@ -45,7 +45,7 @@ extension CommonName {
         case invalidUrl
         
         var string: String {
-            let localKey = [ApiErrorMessage.strucName, "\(self)"].joined(separator: ".")
+            let localKey = [ApiErrorMessage.className, "\(self)"].joined(separator: ".")
             return localKey.localized
         }
     }
@@ -56,7 +56,7 @@ extension CommonName {
         case parse
         
         var string: String {
-            let localKey = [DataFail.strucName, "\(self)"].joined(separator: ".")
+            let localKey = [DataFail.className, "\(self)"].joined(separator: ".")
             return localKey.localized
         }
     }
@@ -65,7 +65,7 @@ extension CommonName {
         case callTel
         
         var string: String {
-            let localKey = [SimulatorMessage.strucName, "\(self)"].joined(separator: ".")
+            let localKey = [SimulatorMessage.className, "\(self)"].joined(separator: ".")
             return localKey.localized
         }
     }
@@ -81,7 +81,7 @@ extension CommonName {
             case newsWeb
             
             var string: String {
-                let localKey = [Page.strucName, Page.Title.strucName, "\(self)"].joined(separator: ".")
+                let localKey = [Page.className, Page.Title.className, "\(self)"].joined(separator: ".")
                 return localKey.localized
             }
         }
@@ -93,7 +93,7 @@ extension CommonName {
             case latestNews
             
             var string: String {
-                let localKey = [Page.strucName,Page.Home.strucName, "\(self)"].joined(separator: ".")
+                let localKey = [Page.className,Page.Home.className, "\(self)"].joined(separator: ".")
                 return localKey.localized
             }
         }

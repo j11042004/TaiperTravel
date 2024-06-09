@@ -25,3 +25,14 @@
 
 "Page.Home.attraction" = "レクリエーションアトラクション";
 "Page.Home.latestNews" = "最新ニュース";
+
+//MARK: - Language
+"Language.taiwan" = "繁体字中国語";
+"Language.china" = "簡体字中国語";
+"Language.english" = "英語";
+"Language.japan" = "日本語";
+"Language.korean" = "韓国語";
+"Language.spanish" = "スペイン語";
+"Language.indonesian" = "インドネシア語";
+"Language.thai" = "タイ語";
+"Language.vietnamese" = "ベトナム語";

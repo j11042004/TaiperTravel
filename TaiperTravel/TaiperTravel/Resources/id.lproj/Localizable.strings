@@ -25,3 +25,14 @@
 
 "Page.Home.attraction" = "Atraksi rekreasi";
 "Page.Home.latestNews" = "berita terbaru";
+
+//MARK: - Language
+"Language.taiwan" = "Cina tradisional";
+"Language.china" = "Cina disederhanakan";
+"Language.english" = "Bahasa inggris";
+"Language.japan" = "Jepang";
+"Language.korean" = "bahasa Korea";
+"Language.spanish" = "Orang Spanyol";
+"Language.indonesian" = "bahasa Indonesia";
+"Language.thai" = "Thai";
+"Language.vietnamese" = "Orang Vietnam";

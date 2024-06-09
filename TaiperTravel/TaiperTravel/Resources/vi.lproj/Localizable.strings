@@ -25,3 +25,14 @@
 
 "Page.Home.attraction" = "Các điểm vui chơi giải trí";
 "Page.Home.latestNews" = "tin mới nhất";
+
+//MARK: - Language
+"Language.taiwan" = "truyền thống Trung Quốc";
+"Language.china" = "Tiếng Trung giản thể";
+"Language.english" = "Tiếng Anh";
+"Language.japan" = "tiếng Nhật";
+"Language.korean" = "ngôn ngữ Hàn Quốc";
+"Language.spanish" = "người Tây Ban Nha";
+"Language.indonesian" = "tiếng Indonesia";
+"Language.thai" = "tiếng Thái";
+"Language.vietnamese" = "Tiếng Việt";

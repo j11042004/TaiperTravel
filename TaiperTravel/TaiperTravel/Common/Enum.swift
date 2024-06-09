@@ -13,7 +13,7 @@ enum ApiError: Error {
     case resultFail(_ code: String?, _ message: String?, _ data: Data? = nil)
 }
 
-enum Language: CaseIterable {
+enum Language: CaseIterable, CommonNameProtocol {
     /// 正體中文
     case taiwan
     /// 簡體中文
@@ -25,13 +25,15 @@ enum Language: CaseIterable {
     /// 韓文
     case korean
     /// 西班牙文
-    case es
+    case spanish
     /// 印尼文
     case indonesian
     /// 泰文
-    case thi
+    case thai
     /// 越南文
     case vietnamese
+    
+    var name: String { [Language.className, "\(self)"].joined(separator: ".").localized }
     
     var apiCode: String {
         switch self {
@@ -40,9 +42,9 @@ enum Language: CaseIterable {
         case .english: return "en"
         case .japan: return "ja"
         case .korean: return "ko"
-        case .es: return "es"
+        case .spanish: return "es"
         case .indonesian: return "id"
-        case .thi: return "th"
+        case .thai: return "th"
         case .vietnamese: return "vi"
         }
     }
@@ -54,9 +56,9 @@ enum Language: CaseIterable {
         case .english: return "en"
         case .japan: return "ja"
         case .korean: return "ko"
-        case .es: return "es"
+        case .spanish: return "es"
         case .indonesian: return "id"
-        case .thi: return "th"
+        case .thai: return "th"
         case .vietnamese: return "vi"
         }
     }
@@ -64,6 +66,9 @@ enum Language: CaseIterable {
     //MARK: - Init
     init(lprojId: String?) {
         self = Language.allCases.first(where: { $0.lprojId == lprojId }) ?? .taiwan
+    }
+    init(name: String) {
+        self = Language.allCases.first(where: { $0.name == name }) ?? .taiwan
     }
 }
 

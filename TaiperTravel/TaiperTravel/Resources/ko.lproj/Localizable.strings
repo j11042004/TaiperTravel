@@ -25,3 +25,14 @@
 
 "Page.Home.attraction" = "레크리에이션 명소";
 "Page.Home.latestNews" = "최근 뉴스";
+
+//MARK: - Language
+"Language.taiwan" = "중국어 번체";
+"Language.china" = "중국어 간체";
+"Language.english" = "영어";
+"Language.japan" = "일본어";
+"Language.korean" = "한국어";
+"Language.spanish" = "스페인의";
+"Language.indonesian" = "인도네시아 인";
+"Language.thai" = "태국어";
+"Language.vietnamese" = "베트남어";
