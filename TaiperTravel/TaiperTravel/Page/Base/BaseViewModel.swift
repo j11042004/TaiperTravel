@@ -39,6 +39,9 @@ extension BaseViewModel {
                 let nsError = error as NSError
                 errorMessage = "\(nsError.domain)(\(code ?? ""))\n\(message ?? "")"
             }
+            else if let errorCode = errorCode {
+                errorMessage = "https(\(errorCode))\n\(message ?? "")"
+            }
             break
         case .resultFail(let code, let message, _):
             errorCode = code

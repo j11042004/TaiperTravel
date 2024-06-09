@@ -35,7 +35,8 @@ extension WebViewModel {
         }
         guard
             checkUrl.hasPrefix("http://") || checkUrl.hasPrefix("https://"),
-            checkUrl != urlRequest.url?.absoluteString
+            checkUrl != urlRequest.url?.absoluteString,
+            Constant.shared.langage != .spanish
         else {
             return true
         }
