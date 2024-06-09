@@ -52,8 +52,6 @@ class HomeViewModel: BaseViewModel {
 //MAR: - Public Func
 extension HomeViewModel {
     public func initData() {
-        resetModelDatas()
-        
         // 確定全資料 Api 有回來 再關閉 Loading
         Publishers.CombineLatest(reloadAttractionSubject, reloadNewsSubject)
             .delay(for: .seconds(0.1), scheduler: DispatchQueue.main)
@@ -62,6 +60,8 @@ extension HomeViewModel {
                 weakSelf.showLoading(false)
             }
             .store(in: &cancellableSet)
+        
+        regetModelDatas()
     }
     
     //MARK: UI
@@ -83,10 +83,7 @@ extension HomeViewModel {
         if language == Constant.shared.langage { return }
         Constant.shared.change(language: language)
         
-        resetModelDatas()
-        
-        apiLoadAttraction()
-        apiLoadEventNews()
+        regetModelDatas()
     }
     
     public func vcLoadHomePageInfo(_ index: Int) -> HomePageInfo? {
@@ -120,7 +117,7 @@ extension HomeViewModel {
             self.showNextVC.send(attractionDetailVC)
             
         case .news:
-            guard 
+            guard
                 let news = selectInfo.news[safe: indexPath.row],
                 let url = URL(string: news.webUrl)
             else { return }
@@ -133,56 +130,20 @@ extension HomeViewModel {
             self.showNextVC.send(webVC)
         }
     }
-    
-    //MARK: API
-    public func apiLoadAttraction() {
-        self.showLoading(true)
-        apiManager.requestAttractions(page: attractionPageCount)
-            .withUnretained(self)
-            .sink { [weak self] completion in
-                guard let self = self else { return }
-                switch completion {
-                case .finished: break
-                case .failure(let apiError):
-                    self.reloadAttractionSubject.send(())
-                    self.processApiAlert(error: apiError, showAlert: true)
-                }
-            } receiveValue: { (weakSelf, apiResult) in
-                weakSelf.loadAttractionImages(apiResult.data)
-            }
-            .store(in: &cancellableSet)
-    }
-    
-    public func apiLoadEventNews() {
-        self.showLoading(true)
-        apiManager.requestEventNews(page: newsPageCount)
-            .withUnretained(self)
-            .sink { [weak self] completion in
-                guard let self = self else { return }
-                switch completion {
-                case .finished: break
-                case .failure(let apiError):
-                    self.latestNewsResponses.append(contentsOf: [])
-                    self.processApiAlert(error: apiError, showAlert: true)
-                }
-            } receiveValue: { (weakSelf, apiResult) in
-                if weakSelf.newsPageCount == 1 { weakSelf.latestNewsResponses.removeAll() }
-                weakSelf.latestNewsResponses.append(contentsOf: apiResult.data)
-                weakSelf.newsPageCount += 1
-            }
-            .store(in: &cancellableSet)
-    }
 }
 
+//MARK: - Private Func
 extension HomeViewModel {
-    private func resetModelDatas() {
+    private func regetModelDatas() {
         pageTitle = CommonName.Page.Title.home.string
         attractionPageCount = 1
         newsPageCount = 1
+        
+        apiLoadAttraction()
+        apiLoadEventNews()
     }
     
     private func loadAttractionImages(_ attractions: [AttractionsResponse]) {
-        if self.attractionPageCount == 1 { self.attractionResponses.removeAll() }
         self.attractionResponses.append(contentsOf: attractions)
         
         // 下載所有第一張照片
@@ -221,6 +182,50 @@ extension HomeViewModel {
                     ImageRepository.shared.imageInfoSet.insert($0)
                 }
             })
+            .store(in: &cancellableSet)
+    }
+    
+    //MARK: API
+    private func apiLoadAttraction() {
+        self.showLoading(true)
+        
+        if self.attractionPageCount == 1 { self.attractionResponses.removeAll() }
+        
+        apiManager.requestAttractions(page: attractionPageCount)
+            .withUnretained(self)
+            .sink { [weak self] completion in
+                guard let self = self else { return }
+                switch completion {
+                case .finished: break
+                case .failure(let apiError):
+                    self.loadAttractionImages([])
+                    self.processApiAlert(error: apiError, showAlert: true)
+                }
+            } receiveValue: { (weakSelf, apiResult) in
+                weakSelf.loadAttractionImages(apiResult.data)
+            }
+            .store(in: &cancellableSet)
+    }
+    
+    private func apiLoadEventNews() {
+        self.showLoading(true)
+        // 重頭開始更新
+        if newsPageCount == 1 { latestNewsResponses.removeAll() }
+        
+        apiManager.requestEventNews(page: newsPageCount)
+            .withUnretained(self)
+            .sink { [weak self] completion in
+                guard let self = self else { return }
+                switch completion {
+                case .finished: break
+                case .failure(let apiError):
+                    self.latestNewsResponses.append(contentsOf: [])
+                    self.processApiAlert(error: apiError, showAlert: true)
+                }
+            } receiveValue: { (weakSelf, apiResult) in
+                weakSelf.latestNewsResponses.append(contentsOf: apiResult.data)
+                weakSelf.newsPageCount += 1
+            }
             .store(in: &cancellableSet)
     }
 }

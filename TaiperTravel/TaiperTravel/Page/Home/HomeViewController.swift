@@ -30,7 +30,6 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         guard let _ = viewModel else  { fatalError("\(#file)'s ViewModel is empty") }
         super.viewDidLoad()
-        self.loadTravelData()
     }
 }
 
@@ -106,7 +105,7 @@ extension HomeViewController {
             })
             .store(in: &cancellableSet)
         
-        Publishers.CombineLatest(viewModel.reloadAttractionSubject, viewModel.reloadNewsSubject)
+        Publishers.Zip(viewModel.reloadAttractionSubject, viewModel.reloadNewsSubject)
             .receive(on: DispatchQueue.main)
             .withUnretained(self)
             .sink { (weakSelf, _) in
@@ -151,10 +150,6 @@ extension HomeViewController {
 
 //MARK: - Private Func
 extension HomeViewController {
-    private func loadTravelData() {
-        self.viewModel.apiLoadAttraction()
-        self.viewModel.apiLoadEventNews()
-    }
     
     //MARK: UI
     private func setupTableView() {
