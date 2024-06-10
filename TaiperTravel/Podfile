@@ -8,6 +8,7 @@ target 'TaiperTravel' do
   pod 'lottie-ios', '~> 3.2.3'
   pod 'Alamofire', '~> 5.4.4'
   pod 'IQKeyboardManagerSwift', '~> 6.5.16'
+  pod 'CryptoSwift', '~> 1.8.2'
 
   # Pods for TaiperTravel
 

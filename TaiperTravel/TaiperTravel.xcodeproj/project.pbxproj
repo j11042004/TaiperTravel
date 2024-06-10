@@ -64,6 +64,8 @@
 		B07776AB2C0C727B004C1F2C /* HomeNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07776AA2C0C727B004C1F2C /* HomeNews.swift */; };
 		B0CD80142C154A260069716C /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CD80132C154A260069716C /* UserDefault.swift */; };
 		B0CD80162C1599150069716C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CD80152C1599150069716C /* Constant.swift */; };
+		B0CD80282C169C990069716C /* AES256.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CD80272C169C990069716C /* AES256.swift */; };
+		B0CD802A2C16A20C0069716C /* Keychanin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CD80292C16A20C0069716C /* Keychanin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +175,8 @@
 		B0CD80122C1358C60069716C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B0CD80132C154A260069716C /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		B0CD80152C1599150069716C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B0CD80272C169C990069716C /* AES256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES256.swift; sourceTree = "<group>"; };
+		B0CD80292C16A20C0069716C /* Keychanin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychanin.swift; sourceTree = "<group>"; };
 		D54CC825432A526D074BFF43 /* Pods-TaiperTravelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiperTravelTests.debug.xcconfig"; path = "Target Support Files/Pods-TaiperTravelTests/Pods-TaiperTravelTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FEFFE2F58E8ED903F3023AF5 /* Pods-TaiperTravel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiperTravel.release.xcconfig"; path = "Target Support Files/Pods-TaiperTravel/Pods-TaiperTravel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -327,7 +331,9 @@
 			isa = PBXGroup;
 			children = (
 				B0CD80152C1599150069716C /* Constant.swift */,
+				B0CD80292C16A20C0069716C /* Keychanin.swift */,
 				B0CD80132C154A260069716C /* UserDefault.swift */,
+				B0CD80272C169C990069716C /* AES256.swift */,
 				B077766E2C08AFFE004C1F2C /* Api */,
 			);
 			path = Core;
@@ -780,7 +786,9 @@
 				B07776652C076A53004C1F2C /* BaseViewController.swift in Sources */,
 				B07776A92C0C7269004C1F2C /* HomeAttraction.swift in Sources */,
 				B077768E2C0C4018004C1F2C /* LoadingView.swift in Sources */,
+				B0CD802A2C16A20C0069716C /* Keychanin.swift in Sources */,
 				B07776872C0B7EF6004C1F2C /* EventNewsResponse.swift in Sources */,
+				B0CD80282C169C990069716C /* AES256.swift in Sources */,
 				B02F75022C10945F00B549C7 /* ImageRepository.swift in Sources */,
 				B0CD80142C154A260069716C /* UserDefault.swift in Sources */,
 				B077762B2C075F14004C1F2C /* HomeViewController.swift in Sources */,

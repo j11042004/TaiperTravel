@@ -82,7 +82,13 @@ enum CustomColor: String {
     var color: UIColor? { .init(named: self.rawValue) }
 }
 
+enum KeychainKey: String, CaseIterable {
+    case deviceUUID
+    case aesKey
+}
+
 enum UserDefaultKey: String {
+    case isKeychainInit
     case oldPreferredLanguage
     case userSetLanguage
 }
